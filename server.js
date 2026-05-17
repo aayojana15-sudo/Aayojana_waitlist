@@ -1,22 +1,31 @@
 const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
+const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname)); // Serve static files like index.html
 
 // PostgreSQL Pool
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'postgres', // using default postgres database
-  password: 'root',
-  port: 5432,
-});
+const pool = new Pool(
+  process.env.DATABASE_URL 
+    ? { 
+        connectionString: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false } // Required for Render's managed PostgreSQL
+      }
+    : {
+        user: 'postgres',
+        host: 'localhost',
+        database: 'postgres',
+        password: 'root',
+        port: 5432,
+      }
+);
 
 // Initialize database table
 const initDb = async () => {
