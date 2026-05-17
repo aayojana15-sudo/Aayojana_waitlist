@@ -2513,8 +2513,12 @@ async function submitForm(e) {
   btn.textContent = 'Submitting...';
   btn.disabled = true;
 
+  const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:3000/api/waitlist' 
+    : 'https://aayojana-waitlist.onrender.com/api/waitlist';
+
   try {
-    const response = await fetch('/api/waitlist', {
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
