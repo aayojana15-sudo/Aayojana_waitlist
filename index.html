@@ -357,11 +357,13 @@
       justify-content: center;
       gap: 40px;
       opacity: 0;
+      pointer-events: none;
       transition: opacity 0.3s;
     }
 
     #mobile-menu.open {
       opacity: 1;
+      pointer-events: auto;
     }
 
     #mobile-menu a {
@@ -1940,6 +1942,8 @@
       text-decoration: none;
       font-size: 14px;
       transition: background 0.2s, border-color 0.2s;
+      position: relative;
+      z-index: 10;
     }
 
     .social-icon:hover {
@@ -2039,9 +2043,6 @@
         display: flex;
       }
 
-      #mobile-menu {
-        display: flex;
-      }
 
       .hero-content {
         grid-template-columns: 1fr;
