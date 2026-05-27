@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aayojana.com — Verified Event Booking Platform | Bhubaneswar</title>
   <meta name="description"
-    content="India's first verified event booking platform for Tier 2 cities. Book mandaps, caterers, and décor with 100% secure payments and AI-powered decoration preview. Launching in Bhubaneswar, Odisha — 2025.">
+    content="Aayojana is Bhubaneswar's first event booking platform. Find verified mandaps and vendors, see your decoration before you pay, and book with your advance 100% secured. Free for event planners. Launching 2026.">
   <meta name="keywords"
-    content="event booking Bhubaneswar, mandap booking Odisha, wedding venue Bhubaneswar, event platform India, Aayojana, secure event booking">
-  <meta property="og:title" content="Aayojana.com — Your Event. Exactly As You Imagined.">
+    content="event booking Bhubaneswar, mandap booking Odisha, wedding venue Bhubaneswar, event platform India, Aayojana, secure event booking, decoration preview Bhubaneswar">
+  <meta property="og:title" content="Aayojana.com — Book Your Mandap, Caterer &amp; Décor in Bhubaneswar">
   <meta property="og:description"
-    content="India's first verified event booking platform. Secure payments. AI décor preview. Launching Bhubaneswar 2026.">
+    content="Bhubaneswar's first verified event booking platform. Find mandaps, preview your décor before paying, and book with 100% advance protection. Free for customers. Launching 2026.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aayojana.com">
-  <meta property="og:image" content="https://aayojana.com/og-image.jpg">
+  <meta property="og:url" content="https://aayojana-waitlist.vercel.app">
+  <meta property="og:image" content="/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aayojana.com — Verified Event Booking Platform">
-  <meta name="twitter:description" content="Secure. Verified. AI-powered. Launching in Bhubaneswar 2026.">
-  <link rel="canonical" href="https://aayojana.com">
+  <meta name="twitter:title" content="Aayojana.com — Verified Event Booking Platform, Bhubaneswar">
+  <meta name="twitter:description" content="Find verified mandaps, see your décor before booking, pay safely. Free for customers. Launching Bhubaneswar 2026.">
+  <link rel="canonical" href="https://aayojana-waitlist.vercel.app">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Aayojana Technologies Private Limited">
   <meta name="geo.region" content="IN-OR">
@@ -513,24 +513,7 @@
       font-size: 18px;
       color: var(--muted);
       line-height: 1.7;
-      max-width: 480px;
-      min-height: 56px;
-    }
-
-    #typewriter-cursor {
-      display: inline-block;
-      width: 2px;
-      height: 18px;
-      background: var(--teal-light);
-      margin-left: 2px;
-      vertical-align: middle;
-      animation: blink 0.8s step-end infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+      max-width: 520px;
     }
 
     .hero-ctas {
@@ -1117,10 +1100,10 @@
 
     .preview-slider-wrap {
       position: relative;
-      height: 260px;
+      height: 340px;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       cursor: ew-resize;
       user-select: none;
     }
@@ -1129,20 +1112,23 @@
     .preview-after {
       position: absolute;
       inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    }
+
+    .preview-before img,
+    .preview-after img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .preview-before {
-      background: linear-gradient(135deg, #0A1520, #0D2035);
+      background: #0A1520;
     }
 
     .preview-after {
-      background: linear-gradient(135deg, #0D2A3A, #1A3D2E);
-      clip-path: inset(0 50% 0 0);
-      transition: clip-path 0.05s;
+      clip-path: inset(0 5% 0 0);
+      transition: clip-path 0.08s ease;
     }
 
     .preview-before-label,
@@ -1159,137 +1145,19 @@
 
     .preview-before-label {
       left: 12px;
-      background: rgba(0, 0, 0, 0.5);
-      color: var(--muted);
+      background: rgba(0, 0, 0, 0.72);
+      color: #fff;
+      backdrop-filter: blur(4px);
     }
 
     .preview-after-label {
       right: 12px;
-      background: rgba(232, 168, 56, 0.15);
+      background: rgba(0, 0, 0, 0.72);
       color: var(--gold);
-      border: 1px solid rgba(232, 168, 56, 0.3);
+      border: 1px solid rgba(232, 168, 56, 0.5);
+      backdrop-filter: blur(4px);
     }
 
-    /* CSS mandap art */
-    .mandap-empty {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      opacity: 0.5;
-    }
-
-    .mandap-arch-empty {
-      width: 100px;
-      height: 70px;
-      border: 2px solid var(--muted);
-      border-bottom: none;
-      border-radius: 50px 50px 0 0;
-    }
-
-    .mandap-floor {
-      width: 120px;
-      height: 3px;
-      background: var(--muted);
-      border-radius: 2px;
-    }
-
-    .mandap-label {
-      font-size: 11px;
-      color: var(--muted);
-      font-family: var(--font-mono);
-    }
-
-    .mandap-decorated {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      position: relative;
-    }
-
-    .mandap-arch-dec {
-      width: 100px;
-      height: 70px;
-      border: 2px solid var(--gold);
-      border-bottom: none;
-      border-radius: 50px 50px 0 0;
-      box-shadow: 0 0 20px rgba(232, 168, 56, 0.4);
-      position: relative;
-    }
-
-    .mandap-flowers {
-      position: absolute;
-      top: -8px;
-      display: flex;
-      gap: 6px;
-    }
-
-    .flower {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      animation: flower-bob 2s ease-in-out infinite alternate;
-    }
-
-    .flower:nth-child(1) {
-      background: #FF6B6B;
-    }
-
-    .flower:nth-child(2) {
-      background: var(--gold);
-      animation-delay: -0.5s;
-    }
-
-    .flower:nth-child(3) {
-      background: #FF8C42;
-      animation-delay: -1s;
-    }
-
-    .flower:nth-child(4) {
-      background: #FFB347;
-      animation-delay: -1.5s;
-    }
-
-    .flower:nth-child(5) {
-      background: #FF6B6B;
-    }
-
-    @keyframes flower-bob {
-      0% {
-        transform: translateY(0);
-      }
-
-      100% {
-        transform: translateY(-3px);
-      }
-    }
-
-    .mandap-lights-row {
-      display: flex;
-      gap: 8px;
-    }
-
-    .mlight {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold-light);
-      box-shadow: 0 0 6px var(--gold);
-      animation: twinkle 1.5s ease-in-out infinite;
-    }
-
-    .mlight:nth-child(odd) {
-      animation-delay: -0.75s;
-    }
-
-    .mandap-floor-dec {
-      width: 120px;
-      height: 3px;
-      background: var(--gold);
-      border-radius: 2px;
-      box-shadow: 0 0 10px var(--gold);
-    }
 
     .slider-handle {
       position: absolute;
@@ -1566,9 +1434,15 @@
     }
 
     .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      justify-content: center;
       gap: 24px;
+      width: 100%;
+    }
+
+    .team-grid .team-card {
+      max-width: 560px;
+      width: 100%;
     }
 
     .team-card {
@@ -1998,14 +1872,11 @@
     }
 
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .steps-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
 
-      .step-card:nth-child(4),
-      .step-card:nth-child(5) {
-        grid-column: span 1;
+    /* Tablet landscape & small laptops */
+    @media (max-width: 1024px) {
+      .hero-content {
+        gap: 48px;
       }
 
       .steps-grid {
@@ -2015,8 +1886,26 @@
       .step-card:nth-child(5) {
         grid-column: 1 / -1;
       }
+
+      .ai-grid {
+        gap: 48px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .team-grid .team-card {
+        max-width: 560px;
+      }
     }
 
+    /* Tablet portrait & large phones */
     @media (max-width: 768px) {
       body {
         cursor: auto;
@@ -2043,7 +1932,6 @@
         display: flex;
       }
 
-
       .hero-content {
         grid-template-columns: 1fr;
         padding: 100px 20px 60px;
@@ -2052,6 +1940,32 @@
 
       .hero-mockup {
         display: none;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .section-inner {
+        padding: 0 20px;
+      }
+
+      #problem,
+      #solution,
+      #ai-feature,
+      #process,
+      #stats,
+      #team,
+      #pricing,
+      #waitlist {
+        padding: var(--space-xl) 0;
       }
 
       .problem-cards {
@@ -2068,7 +1982,11 @@
 
       .ai-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 40px;
+      }
+
+      .preview-card {
+        padding: 20px;
       }
 
       .process-grid {
@@ -2079,8 +1997,25 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .stat-strip {
+        gap: 20px;
+        padding: 16px 20px;
+      }
+
+      .quote-card {
+        padding: 32px 20px;
+      }
+
+      .quote-mark {
+        font-size: 80px;
+      }
+
       .team-grid {
-        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .team-grid .team-card {
+        max-width: 100%;
       }
 
       .footer-grid {
@@ -2088,31 +2023,9 @@
         gap: 40px;
       }
 
-      .section-inner {
-        padding: 0 20px;
-      }
-
-      .hero-ctas {
+      .footer-bottom {
         flex-direction: column;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .stat-strip {
-        gap: 20px;
-        padding: 16px 20px;
-      }
-
-      .quote-card {
-        padding: 36px 24px;
-      }
-
-      .quote-mark {
-        font-size: 80px;
+        text-align: center;
       }
 
       .waitlist-inner {
@@ -2125,11 +2038,6 @@
         gap: 12px;
       }
 
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
       .form-tabs {
         flex-direction: column;
         border-radius: var(--radius-lg);
@@ -2138,19 +2046,18 @@
       .form-tab {
         border-radius: var(--radius-md);
       }
-
-      #problem,
-      #solution,
-      #ai-feature,
-      #process,
-      #stats,
-      #team,
-      #waitlist {
-        padding: var(--space-xl) 0;
-      }
     }
 
+    /* Small phones */
     @media (max-width: 480px) {
+      .hero-headline {
+        font-size: clamp(38px, 10vw, 56px);
+      }
+
+      .hero-subheading {
+        font-size: 16px;
+      }
+
       .stats-grid {
         grid-template-columns: 1fr;
       }
@@ -2159,11 +2066,68 @@
         flex-direction: column;
         gap: 12px;
       }
+
+      .mockup-card {
+        width: 100%;
+      }
+
+      .preview-slider-wrap {
+        height: 240px;
+      }
+
+      .team-card {
+        padding: 28px 20px;
+      }
+
+      .team-quote {
+        font-size: 14px;
+      }
+
+      .waitlist-headline {
+        font-size: clamp(32px, 9vw, 56px);
+      }
+
+      .form-input,
+      .form-select {
+        font-size: 16px; /* prevents iOS zoom on focus */
+      }
+
+      .btn-submit-customer,
+      .btn-submit-vendor {
+        font-size: 15px;
+        padding: 16px;
+      }
+
+      .footer-brand-name {
+        font-size: 20px;
+      }
+
+      .process-card {
+        padding: 28px 20px;
+      }
+
+      #pricing .section-inner > div > div {
+        padding: 28px 20px !important;
+      }
     }
 
-    /* touch device — disable 3D */
-    @media (pointer: coarse) {
+    /* Extra small phones */
+    @media (max-width: 360px) {
+      .section-inner {
+        padding: 0 16px;
+      }
 
+      .hero-content {
+        padding: 90px 16px 48px;
+      }
+
+      .waitlist-inner {
+        padding: 0 16px;
+      }
+    }
+
+    /* Touch devices — disable 3D tilt effects */
+    @media (pointer: coarse) {
       .mockup-card,
       .step-card,
       .team-card {
@@ -2214,7 +2178,7 @@
     </div>
     <ul class="nav-links">
       <li><a href="#solution">How It Works</a></li>
-      <li><a href="#ai-feature">AI Preview</a></li>
+      <li><a href="#ai-feature">Décor Preview</a></li>
       <li class="vendor-only" style="display:none;"><a href="#process">For Vendors</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#waitlist" class="btn-nav">Join Waitlist</a></li>
@@ -2227,7 +2191,7 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu">
     <a href="#solution" onclick="closeMobileMenu()">How It Works</a>
-    <a href="#ai-feature" onclick="closeMobileMenu()">AI Preview</a>
+    <a href="#ai-feature" onclick="closeMobileMenu()">Décor Preview</a>
     <a href="#process" onclick="closeMobileMenu()">For Vendors</a>
     <a href="#team" onclick="closeMobileMenu()">Team</a>
     <a href="#waitlist" onclick="closeMobileMenu()" style="color:var(--gold)">Join Waitlist →</a>
@@ -2247,25 +2211,25 @@
       <div class="hero-left">
         <div class="hero-chip">
           <span class="chip-dot">✦</span>
-          Launching in Bhubaneswar · 2026
+          Launching Soon
         </div>
 
         <h1 class="hero-headline">
-          Your Event.<br>
-          Exactly As<br>
-          <em>You Imagined.</em>
+          Book Your Mandap,<br>
+          Caterer &amp; Décor —<br>
+          <em>All Secured.</em>
         </h1>
 
         <p class="hero-subheading" id="hero-subheading">
-          <span id="typewriter-text"></span><span id="typewriter-cursor"></span>
+          Aayojana is India's first platform to find verified event venues, preview your decoration before booking, and pay safely with 100% advance protection. Free for customers. Launching 2026.
         </p>
 
         <div class="hero-ctas">
           <a href="#waitlist" class="btn-primary magnetic-btn">
-            Join the Waitlist →
+            Get Early Access — It's Free
           </a>
           <a href="#solution" class="btn-secondary magnetic-btn">
-            Watch How It Works
+            See How It Works ↓
           </a>
         </div>
 
@@ -2314,7 +2278,7 @@
             <span class="mockup-value teal">✓ Confirmed</span>
           </div>
 
-          <button class="mockup-confirm-btn">View AI Décor Preview →</button>
+          <button class="mockup-confirm-btn">View Décor Preview →</button>
         </div>
       </div>
     </div>
@@ -2325,32 +2289,33 @@
 ══════════════════════════════ -->
   <section id="problem">
     <div class="section-inner">
-      <div class="section-label reveal">The Problem</div>
+      <div class="section-label reveal">Sound Familiar?</div>
       <h2 class="problem-headline reveal">
-        Planning an event in Bhubaneswar<br>
-        shouldn't feel like a gamble.
+        Sound familiar?
       </h2>
-      <p class="problem-sub reveal reveal-delay-1">"But right now, it does."</p>
 
       <div class="problem-cards">
         <div class="problem-card reveal">
-          <div class="problem-card-icon">💬</div>
-          <div class="problem-card-title">Verbal Promises</div>
-          <p class="problem-card-text">Vendors confirm on WhatsApp. Then ghost. No contract. No accountability. No
-            refund.</p>
+          <div class="problem-card-icon">📵</div>
+          <div class="problem-card-title">He Stopped Picking Up Calls</div>
+          <p class="problem-card-text">"You paid ₹20,000 advance to a decorator. He confirmed. Then stopped picking up calls."</p>
         </div>
         <div class="problem-card reveal reveal-delay-1">
-          <div class="problem-card-icon">💸</div>
-          <div class="problem-card-title">Cash in the Dark</div>
-          <p class="problem-card-text">You pay an advance in cash with no receipt. No protection if something goes
-            wrong.</p>
+          <div class="problem-card-icon">😞</div>
+          <div class="problem-card-title">Nothing Like the Photos</div>
+          <p class="problem-card-text">"The mandap looked nothing like the photo they showed you on WhatsApp."</p>
         </div>
         <div class="problem-card reveal reveal-delay-2">
-          <div class="problem-card-icon">🔍</div>
-          <div class="problem-card-title">Zero Transparency</div>
-          <p class="problem-card-text">No way to compare real prices. No way to see what your event will actually look
-            like.</p>
+          <div class="problem-card-icon">😤</div>
+          <div class="problem-card-title">Surprise Bill the Day Before</div>
+          <p class="problem-card-text">"You had no idea what the final bill would be until the day before the event."</p>
         </div>
+      </div>
+
+      <div class="reveal" style="text-align:center; margin-bottom: 48px;">
+        <a href="#waitlist" class="btn-primary magnetic-btn" style="display:inline-flex;">
+          Stop guessing. Book with certainty →
+        </a>
       </div>
 
       <div class="stat-strip reveal">
@@ -2379,28 +2344,28 @@
       <div class="steps-grid">
         <div class="step-card reveal tilt-card">
           <div class="step-number">01</div>
-          <div class="step-title">Discover</div>
-          <p class="step-desc">Search verified venues & vendors by city, date & budget</p>
+          <div class="step-title">Find Verified Vendors</div>
+          <p class="step-desc">Find verified venues and vendors in your desired location  all checked, all real.</p>
         </div>
         <div class="step-card reveal reveal-delay-1 tilt-card">
           <div class="step-number">02</div>
-          <div class="step-title">Preview</div>
-          <p class="step-desc">See exactly how your decorated venue will look with AI</p>
+          <div class="step-title">See Before You Book</div>
+          <p class="step-desc">See your decoration before you book exactly how it will look on your event day. For free.</p>
         </div>
         <div class="step-card reveal reveal-delay-2 tilt-card">
           <div class="step-number">03</div>
-          <div class="step-title">Book</div>
-          <p class="step-desc">Send a booking request. Vendor confirms within hours.</p>
+          <div class="step-title">Book Instantly</div>
+          <p class="step-desc">Book with a single click. Vendor confirms. No back-and-forth.</p>
         </div>
         <div class="step-card reveal tilt-card">
           <div class="step-number">04</div>
-          <div class="step-title">Pay Safely</div>
-          <p class="step-desc">Advance held in escrow. Released only after your event.</p>
+          <div class="step-title">Your Advance is Safe</div>
+          <p class="step-desc">Your advance is held safely with us until your event happens. No risk, no loss.</p>
         </div>
         <div class="step-card reveal reveal-delay-1 tilt-card">
           <div class="step-number">05</div>
-          <div class="step-title">Celebrate</div>
-          <p class="step-desc">Your event happens exactly as you saw it. We guarantee it.</p>
+          <div class="step-title">Enjoy Your Event</div>
+          <p class="step-desc">Enjoy your event exactly as you saw it. Exactly as you planned it.</p>
         </div>
       </div>
     </div>
@@ -2413,68 +2378,52 @@
     <div class="section-inner">
       <div class="ai-grid">
         <div class="ai-left">
-          <div class="hero-chip reveal">
-            <span class="chip-dot">✦</span>
-            Powered by AI
-          </div>
           <h2 class="ai-headline reveal">
-            See your event<br>
-            <em style="color:var(--gold)">before</em> it happens.
+            See Your Decorated Mandap<br>
+            <em style="color:var(--gold)">Before You Pay a Single Rupee.</em>
           </h2>
           <p class="ai-body reveal reveal-delay-1">
-            Choose your venue. Pick your decoration theme. Watch Aayojana's AI render exactly how your mandap, hall, or
-            ground will look — in real time. Every flower. Every light. Every moment. Before you spend a single rupee.
+            Pick your venue on Aayojana. Choose your decoration style. Watch it appear in front of you exactly how it will look on your event day. Change colors, themes, and packages. See the price update live. Then book with confidence.
           </p>
           <ul class="ai-features reveal reveal-delay-2">
-            <li>Real-time decoration preview</li>
-            <li>Live price updates as you customize</li>
-            <li>Choose from 20+ curated themes</li>
-            <li>Photorealistic venue renders</li>
+            <li>See your mandap decorated before you commit</li>
+            <li>Live price updates as you change themes</li>
+            <li>Choose from 20+ curated styles</li>
             <li>Compare packages side by side</li>
+            <li>No surprises on the day of your event</li>
           </ul>
+          <div class="reveal" style="margin-top: 8px;">
+            <a href="#waitlist" class="btn-primary magnetic-btn" style="display:inline-flex;">
+              Preview your event décor — free →
+            </a>
+          </div>
         </div>
 
         <div class="ai-right reveal reveal-delay-1">
           <div class="preview-card">
             <div class="preview-tabs">
-              <button class="preview-tab active" data-price="45000">Basic</button>
-              <button class="preview-tab" data-price="85000">Standard</button>
-              <button class="preview-tab" data-price="145000">Premium</button>
+              <button class="preview-tab active" data-price="45000" data-image="images/mandap-after-basic.jpg">Basic</button>
+              <button class="preview-tab" data-price="85000" data-image="images/mandap-after-standard.jpg">Standard</button>
+              <button class="preview-tab" data-price="145000" data-image="images/mandap-after-premium.jpg">Premium</button>
             </div>
 
             <div class="preview-slider-wrap" id="preview-slider">
+              <!-- Base layer: decorated venue (swaps per tab) -->
               <div class="preview-before">
-                <div class="mandap-empty">
-                  <div class="mandap-arch-empty"></div>
-                  <div class="mandap-floor"></div>
-                  <div class="mandap-label">Empty Venue</div>
-                </div>
-                <div class="preview-before-label">Before</div>
+                <img id="decorated-img" src="images/mandap-after-basic.jpg" alt="Decorated mandap — Aayojana décor preview">
               </div>
+              <!-- Top layer: empty venue, clipped to left — drag right to reveal decorated -->
               <div class="preview-after" id="preview-after">
-                <div class="mandap-decorated">
-                  <div class="mandap-arch-dec">
-                    <div class="mandap-flowers">
-                      <div class="flower"></div>
-                      <div class="flower"></div>
-                      <div class="flower"></div>
-                      <div class="flower"></div>
-                      <div class="flower"></div>
-                    </div>
-                  </div>
-                  <div class="mandap-lights-row">
-                    <div class="mlight"></div>
-                    <div class="mlight"></div>
-                    <div class="mlight"></div>
-                    <div class="mlight"></div>
-                    <div class="mlight"></div>
-                  </div>
-                  <div class="mandap-floor-dec"></div>
-                </div>
-                <div class="preview-after-label">AI Preview</div>
+                <img src="images/mandap-before.jpg" alt="Empty mandap venue">
               </div>
               <div class="slider-handle" id="slider-handle"></div>
+              <div class="preview-before-label" style="z-index:15;">Empty Venue</div>
+              <div class="preview-after-label" style="z-index:15;">✦ Decorated</div>
             </div>
+
+            <p style="font-size:12px; color:var(--muted); text-align:center; margin-bottom:16px; font-style:italic; line-height:1.5;">
+              This is what Aayojana's Décor Preview shows you — before you book.
+            </p>
 
             <div class="preview-price-row">
               <div>
@@ -2539,7 +2488,7 @@
       <div class="stats-grid">
         <div class="stat-box reveal">
           <div class="stat-number">
-            <span class="counter" data-target="20" data-suffix="+">0</span>
+            <span class="counter" data-target="20" data-suffix="+">20</span>
             <span class="stat-suffix">+</span>
           </div>
           <div class="stat-title">Vendors Already Interested</div>
@@ -2547,27 +2496,32 @@
         </div>
         <div class="stat-box reveal reveal-delay-1">
           <div class="stat-number">
-            <span class="counter" data-target="0">0</span>
+            <span style="font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:300;color:var(--gold)">Zero</span>
           </div>
           <div class="stat-title">Dominant Competitors</div>
-          <div class="stat-desc">In Tier 2 Odisha — the market is wide open</div>
+          <div class="stat-desc">In Tier 2 Odisha, the market is wide open</div>
         </div>
         <div class="stat-box reveal reveal-delay-2">
           <div class="stat-number">
-            <span class="stat-prefix">₹</span>
-            <span class="counter" data-target="0">0</span>
+            <span style="font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:300;color:var(--gold)">100%</span>
           </div>
-          <div class="stat-title">Paid for Customer Acquisition</div>
-          <div class="stat-desc">Organic waitlist growth through community trust</div>
+          <div class="stat-title">Organic Growth</div>
+          <div class="stat-desc">Every signup on our waitlist came through community trust, no paid ads</div>
         </div>
         <div class="stat-box reveal reveal-delay-3">
           <div class="stat-number">
-            <span class="counter" data-target="100">0</span>
+            <span class="counter" data-target="100">100</span>
             <span class="stat-suffix">%</span>
           </div>
           <div class="stat-title">Secure Advance Payment</div>
           <div class="stat-desc">Every rupee protected in escrow until delivery</div>
         </div>
+      </div>
+
+      <div class="reveal" style="text-align:center; margin-bottom: 64px;">
+        <a href="#waitlist" class="btn-primary magnetic-btn" style="display:inline-flex;">
+          Join 200+ families on the waitlist →
+        </a>
       </div>
 
       <div class="quote-card reveal">
@@ -2587,93 +2541,78 @@
   <section id="team">
     <div class="section-inner">
       <h2 class="team-headline reveal">
-        The people building<br>
-        <em>a better way to celebrate.</em>
+        Why we are building<br>
+        <em>Aayojana</em>
       </h2>
       <div class="team-grid">
         <div class="team-card reveal tilt-card">
-          <img src="images\WhatsApp Image 2026-05-17 at 08.54.23.jpeg" alt="Omprakash Sahoo" class="team-avatar"
-            style="object-fit: cover; width: 72px; height: 72px; border-radius: 50%;">
-          <div>
-            <div class="team-name">Omprakash Sahoo</div>
-            <div class="team-role">Founder & CEO</div>
+          <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+            <img src="images\WhatsApp Image 2026-05-17 at 08.54.23.jpeg" alt="Omprakash Sahoo" class="team-avatar"
+              style="object-fit: cover; width: 72px; height: 72px; border-radius: 50%; flex-shrink:0;">
+            <div>
+              <div class="team-name">Omprakash Sahoo</div>
+              <div class="team-role">Founder &amp; CEO</div>
+            </div>
           </div>
-          <p class="team-quote">"Building Aayojana to give every family in Bharat the certainty their biggest day
-            deserves."</p>
-          <!-- <div class="team-tags">
-          <span class="tag">Full-Stack Dev</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">React</span>
-          <span class="tag">ML/AI</span>
-        </div> -->
-          <a href="https://linkedin.com/in/[update]" class="team-link">
+          <p class="team-quote" style="font-style:normal; line-height:1.85; font-size:15px;">
+            My name is Omprakash Sahoo. I'm from Bhubaneswar.<br><br>
+            I've watched families in my own city pay advances to vendors who vanished, book mandaps that looked nothing like the photos they were shown, and get hit with surprise charges on event day.<br><br>
+            I'm building Aayojana so my own family and yours never has to deal with that again. Every booking on this platform goes through me personally. If something goes wrong, you'll find me at the link below.
+          </p>
+          <a href="https://www.linkedin.com/in/omprakash-sahoo-4097b4246" class="team-link" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
-            LinkedIn
+            linkedin.com/in/omprakash-sahoo-4097b4246
           </a>
-        </div>
-
-        <div class="team-card reveal tilt-card">
-          <img src="w" alt="Abhisek Behura" class="team-avatar"
-            style="object-fit: cover; width: 72px; height: 72px; border-radius: 50%;">
-          <div>
-            <div class="team-name">Abhisek Behura</div>
-            <div class="team-role">Co-Founder</div>
-          </div>
-          <p class="team-quote">"Building Aayojana to give every family in Bharat the certainty their biggest day
-            deserves."</p>
-          <!-- <div class="team-tags">
-          <span class="tag">Full-Stack Dev</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">React</span>
-          <span class="tag">ML/AI</span>
-        </div> -->
-          <a href="https://linkedin.com/in/[update]" class="team-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-            LinkedIn
-          </a>
-        </div>
-        <div class="team-card reveal reveal-delay-2 tilt-card">
-          <div class="team-avatar advisor">D</div>
-          <div>
-            <div class="team-name">[Director Name]</div>
-            <div class="team-role">Director / Advisor</div>
-          </div>
-          <p class="team-quote">[One line about their background and why they believe in Aayojana]</p>
-          <div class="team-tags">
-            <!-- <span class="tag">Strategy</span>
-          <span class="tag">Operations</span>
-          <span class="tag">Odisha</span>
-        </div> -->
-            <a href="https://linkedin.com/in/[update]" class="team-link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-              LinkedIn
-            </a>
-          </div>
         </div>
       </div>
   </section>
 
   <!-- ══════════════════════════════
-     SECTION 8 — WAITLIST
+     SECTION 8 — PRICING / FREE
+══════════════════════════════ -->
+  <section id="pricing" style="padding: var(--space-2xl) 0; background: var(--navy-light);">
+    <div class="section-inner">
+      <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+        <div class="section-label reveal" style="justify-content:center;">No Hidden Fees</div>
+        <h2 class="reveal" style="font-family:var(--font-display); font-size:clamp(36px,5vw,60px); font-weight:500; line-height:1.15; margin-bottom: 16px;">
+          Is Aayojana free to use?
+        </h2>
+        <p class="reveal reveal-delay-1" style="font-size:18px; color:var(--muted); margin-bottom:56px;">Yes. Here's exactly how it works.</p>
+
+        <div class="reveal reveal-delay-1" style="max-width:560px; margin:0 auto;">
+          <div style="background:var(--card-bg); border:1px solid var(--card-border); border-top: 3px solid var(--gold); border-radius:var(--radius-lg); padding:40px 32px; text-align:left;">
+            <div style="font-size:32px; margin-bottom:16px;">🎉</div>
+            <div style="font-family:var(--font-display); font-size:26px; font-weight:500; color:var(--gold); margin-bottom:8px;">For Families Planning Events</div>
+            <div style="font-family:var(--font-display); font-size:48px; font-weight:300; color:var(--white); margin-bottom:16px;">Free</div>
+            <p style="font-size:15px; color:var(--muted); line-height:1.7; margin-bottom:24px;">
+              Completely free to use. No subscription. No hidden fees. You only pay the vendor directly through our secure platform. That's it.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--white);"><span style="color:var(--gold);">✦</span> Browse all venues &amp; vendors</li>
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--white);"><span style="color:var(--gold);">✦</span> Preview your décor before booking</li>
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--white);"><span style="color:var(--gold);">✦</span> Advance held safely until your event</li>
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--white);"><span style="color:var(--gold);">✦</span> 24/7 support and dispute resolution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+     SECTION 9 — WAITLIST
 ══════════════════════════════ -->
   <section id="waitlist">
     <div class="waitlist-inner">
       <div class="section-label reveal" style="justify-content:center">Join the Waitlist</div>
       <h2 class="waitlist-headline reveal">
-        Be first.<br>
-        Be part of it.
+        Ready to plan your event<br>
+        the right way?
       </h2>
       <p class="waitlist-sub reveal reveal-delay-1">
-        Aayojana launches in Bhubaneswar in 2025. Join the waitlist whether you're planning an event or you're a venue
+        Aayojana launches in Bhubaneswar in 2026. Join the waitlist whether you're planning an event or you're a venue
         owner ready to grow with us.
       </p>
 
@@ -2707,7 +2646,7 @@
             <label class="form-label">Email Address</label>
             <input type="email" class="form-input" placeholder="Your email (optional)">
           </div>
-          <button class="btn-submit-customer magnetic-btn" onclick="submitForm(event)">Join Waitlist →</button>
+          <button class="btn-submit-customer magnetic-btn" onclick="submitForm(event)">Get Early Access — Free →</button>
         </div>
 
         <div class="waitlist-form-panel" id="panel-vendor">
@@ -2735,9 +2674,12 @@
         </div>
       </div>
 
+      <p style="font-size:13px; color:var(--muted); text-align:center; margin-top:12px; margin-bottom:16px;">
+        Takes 30 seconds. No credit card. No spam.
+      </p>
       <div class="trust-signals reveal">
         <div class="trust-item">🔒 We never share your data</div>
-        <div class="trust-item">📍 Launching Bhubaneswar 2025</div>
+        <div class="trust-item">📍 Launching Bhubaneswar 2026</div>
         <div class="trust-item">✦ Zero spam, ever</div>
       </div>
     </div>
@@ -2760,13 +2702,13 @@
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>
             </a>
-            <a href="https://linkedin.com/company/aayojana" class="social-icon" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/aayojana-india%E2%80%99s-first-secure-event-booking-platform-865aab411/" class="social-icon" title="LinkedIn" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="#" class="social-icon" title="Twitter/X">
+            <a href="https://x.com/Aayojana_" class="social-icon" title="Twitter/X">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -2799,8 +2741,8 @@
 
       <div class="footer-bottom">
         <p class="footer-copy">
-          © 2025 Aayojana Technologies Private Limited · Bhubaneswar, Odisha, India<br>
-          CIN: [To be updated after registration]
+          © 2026 Aayojana Technologies Private Limited · Bhubaneswar, Odisha, India<br>
+          <!-- CIN: [To be updated after registration] -->
         </p>
         <p class="footer-copy">Made with <span class="footer-heart">❤️</span> for Bharat</p>
       </div>
@@ -2815,7 +2757,6 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('preloader').classList.add('hidden');
-        startTypewriter();
       }, 1700);
     });
 
@@ -2876,19 +2817,7 @@
       setTimeout(() => { mobileMenu.style.display = ''; }, 300);
     }
 
-    // ── 6. TYPEWRITER ────────────────────────────────────
-    function startTypewriter() {
-      const text = "India's first verified event booking platform secure payments, AI décor preview, zero broken promises.";
-      const el = document.getElementById('typewriter-text');
-      let i = 0;
-      const interval = setInterval(() => {
-        if (i < text.length) {
-          el.textContent += text[i++];
-        } else {
-          clearInterval(interval);
-        }
-      }, 30);
-    }
+    // ── 6. TYPEWRITER (removed — hero uses static subheading) ──
 
     // ── 7. INTERSECTION OBSERVER ─────────────────────────
     const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
@@ -3042,15 +2971,17 @@
 
       function setClip(p) {
         pct = Math.max(5, Math.min(95, p));
-        afterEl.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-        handleEl.style.left = pct + '%';
+        // clip "empty" layer from the right — at pct=5 almost all empty shows, at pct=90 mostly decorated shows
+        afterEl.style.clipPath = `inset(0 ${pct}% 0 0)`;
+        handleEl.style.left = (100 - pct) + '%';
       }
-      setClip(50);
+      setClip(5);
 
       function getPos(e) {
         const rect = sliderWrap.getBoundingClientRect();
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        return (clientX - rect.left) / rect.width * 100;
+        // invert: drag right = more decorated = higher pct clipped from right = lower handle x
+        return 100 - ((clientX - rect.left) / rect.width * 100);
       }
 
       sliderWrap.addEventListener('mousedown', e => { dragging = true; setClip(getPos(e)); });
@@ -3060,13 +2991,13 @@
       document.addEventListener('mouseup', () => dragging = false);
       document.addEventListener('touchend', () => dragging = false);
 
-      // auto demo on load
-      let demo = true, demoDir = 1, demoVal = 50;
+      // auto demo — starts showing empty, slowly sweeps to reveal decorated
+      let demo = true, demoDir = 1, demoVal = 5;
       function demoSlider() {
         if (!demo) return;
-        demoVal += demoDir * 0.4;
-        if (demoVal > 80) demoDir = -1;
-        if (demoVal < 20) demoDir = 1;
+        demoVal += demoDir * 0.15;
+        if (demoVal > 88) demoDir = -1;
+        if (demoVal < 5) demoDir = 1;
         setClip(demoVal);
         requestAnimationFrame(demoSlider);
       }
@@ -3083,6 +3014,9 @@
         this.classList.add('active');
         const label = this.textContent.trim();
         const price = prices[label] || 45000;
+        // swap decorated image for this tier
+        const decoratedImg = document.getElementById('decorated-img');
+        if (decoratedImg && this.dataset.image) decoratedImg.src = this.dataset.image;
         const el = document.getElementById('preview-price');
         let current = parseInt(el.textContent.replace(/[^\d]/g, '')) || 0;
         const diff = price - current;

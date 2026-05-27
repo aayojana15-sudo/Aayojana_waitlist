@@ -13,20 +13,11 @@ app.use(express.json());
 app.use(express.static(__dirname)); // Serve static files like index.html
 
 // PostgreSQL Pool
-const pool = new Pool(
-  process.env.DATABASE_URL 
-    ? { 
-        connectionString: process.env.DATABASE_URL,
-        ssl: { rejectUnauthorized: false } // Required for Render's managed PostgreSQL
-      }
-    : {
-        user: 'postgres',
-        host: 'localhost',
-        database: 'postgres',
-        password: 'root',
-        port: 5432,
-      }
-);
+const isLocal = !process.env.DATABASE_URL || process.env.DATABASE_URL.includes('localhost') || process.env.DATABASE_URL.includes('127.0.0.1');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:root@localhost:5432/postgres',
+  ...(isLocal ? {} : { ssl: { rejectUnauthorized: false } }),
+});
 
 // Initialize database table
 const initDb = async () => {
