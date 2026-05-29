@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Aayojana Technologies Private Limited</title>
+  <meta name="description" content="Terms of Service of Aayojana Technologies Private Limited. Read the rules and obligations governing use of the Aayojana platform.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #000000;
+      --navy-light: #0A0A0A;
+      --gold: #D4AF37;
+      --gold-light: #F5C842;
+      --white: #F8F9FF;
+      --muted: #8A9BB5;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(212, 175, 55, 0.2);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-md: 16px;
+      --radius-full: 9999px;
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Scroll Progress ── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; width: 0%; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      z-index: 9999; transition: width 0.1s linear;
+    }
+
+    /* ── Navbar ── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      padding: 18px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-logo {
+      font-family: var(--font-display); font-size: 20px; font-weight: 500;
+      color: var(--white); text-decoration: none; letter-spacing: 1px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-back {
+      font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+
+    /* ── Hero Banner ── */
+    .pp-hero {
+      padding: 120px 0 64px;
+      border-bottom: 1px solid var(--card-border);
+      background: radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.06) 0%, transparent 70%);
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+    .pp-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .pp-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+    .pp-title {
+      font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px);
+      font-weight: 500; color: var(--white); line-height: 1.08;
+      letter-spacing: -0.5px; margin-bottom: 28px;
+    }
+    .pp-meta {
+      display: flex; flex-wrap: wrap; gap: 24px;
+      font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    }
+    .pp-meta span { display: flex; align-items: center; gap: 8px; }
+    .pp-meta span::before { content: '·'; color: var(--gold); }
+    .pp-meta span:first-child::before { display: none; }
+
+    /* ── Content ── */
+    .pp-content { padding: 64px 0 96px; }
+
+    /* TOC */
+    .pp-toc {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin-bottom: 56px; backdrop-filter: blur(16px);
+    }
+    .pp-toc-title {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .pp-toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .pp-toc a {
+      font-size: 14px; color: var(--muted); text-decoration: none;
+      font-family: var(--font-body); transition: color 0.2s;
+    }
+    .pp-toc a:hover { color: var(--gold); }
+
+    /* Sections */
+    .pp-section { margin-bottom: 52px; scroll-margin-top: 100px; }
+    .pp-section-num {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .pp-section h2 {
+      font-family: var(--font-display); font-size: 28px; font-weight: 500;
+      color: var(--white); margin-bottom: 20px; line-height: 1.2;
+    }
+    .pp-section h3 {
+      font-family: var(--font-display); font-size: 20px; font-weight: 500;
+      color: var(--white); margin: 28px 0 12px;
+    }
+    .pp-section p {
+      font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 16px;
+    }
+    .pp-section p:last-child { margin-bottom: 0; }
+    .pp-section ul, .pp-section ol.list {
+      padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;
+    }
+    .pp-section ul li, .pp-section ol.list li {
+      font-size: 15px; color: var(--muted); line-height: 1.7;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .pp-section ul li::before {
+      content: '–'; color: var(--gold); flex-shrink: 0; margin-top: 2px;
+    }
+    .pp-section ol.list { counter-reset: pp-counter; }
+    .pp-section ol.list li { counter-increment: pp-counter; }
+    .pp-section ol.list li::before {
+      content: counter(pp-counter) '.'; color: var(--gold);
+      font-family: var(--font-mono); font-size: 12px; flex-shrink: 0;
+      margin-top: 3px; min-width: 22px;
+    }
+
+    /* Definition table */
+    .def-table { display: flex; flex-direction: column; gap: 0; margin-bottom: 16px; }
+    .def-row {
+      display: grid; grid-template-columns: 180px 1fr; gap: 24px;
+      padding: 14px 0; border-bottom: 1px solid rgba(212,175,55,0.08);
+      align-items: flex-start;
+    }
+    .def-row:last-child { border-bottom: none; }
+    .def-term {
+      font-family: var(--font-mono); font-size: 13px; color: var(--gold);
+      font-weight: 500; padding-top: 2px;
+    }
+    .def-desc { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    /* Divider */
+    .pp-divider { border: none; border-top: 1px solid var(--card-border); margin: 52px 0; }
+
+    /* Highlight / warning box */
+    .pp-highlight {
+      background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-highlight p { margin-bottom: 0; }
+    .pp-warn {
+      background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-warn p { margin-bottom: 0; color: #f87171; }
+
+    /* Sub-section label */
+    .pp-sub-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(212,175,55,0.6); margin: 28px 0 10px;
+    }
+
+    /* ── Footer ── */
+    .pp-footer {
+      border-top: 1px solid var(--card-border);
+      padding: 32px 0; background: var(--navy-light);
+    }
+    .pp-footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .pp-footer-copy { font-size: 13px; color: var(--muted); font-family: var(--font-mono); }
+    .pp-footer-back {
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      font-family: var(--font-mono); transition: color 0.2s;
+    }
+    .pp-footer-back:hover { color: var(--gold); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      #navbar { padding: 14px 20px; }
+      .container { padding: 0 20px; }
+      .pp-hero { padding: 90px 0 48px; }
+      .pp-content { padding: 40px 0 64px; }
+      .pp-toc { padding: 20px; }
+      .def-row { grid-template-columns: 1fr; gap: 6px; }
+      .def-term { padding-top: 0; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .pp-meta { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Screenshot_2026-01-24_135831-removebg-preview.png" alt="Aayojana">
+    </a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </header>
+
+  <!-- Hero -->
+  <div class="pp-hero">
+    <div class="container">
+      <div class="pp-label">Legal</div>
+      <h1 class="pp-title">Terms of Service</h1>
+      <div class="pp-meta">
+        <span>Aayojana Technologies Private Limited</span>
+        <span>Effective Date: 1 June 2026</span>
+        <span>Last Updated: 1 June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="pp-content">
+    <div class="container">
+
+      <!-- TOC -->
+      <div class="pp-toc">
+        <div class="pp-toc-title">Table of Contents</div>
+        <ol>
+          <li><a href="#s1">Acceptance of Terms</a></li>
+          <li><a href="#s2">Definitions</a></li>
+          <li><a href="#s3">Eligibility</a></li>
+          <li><a href="#s4">Platform Nature and Aayojana's Role</a></li>
+          <li><a href="#s5">Customer Terms</a></li>
+          <li><a href="#s6">Vendor Terms</a></li>
+          <li><a href="#s7">Payments and Refunds</a></li>
+          <li><a href="#s8">Intellectual Property</a></li>
+          <li><a href="#s9">Limitation of Liability</a></li>
+          <li><a href="#s10">Indemnification</a></li>
+          <li><a href="#s11">Termination</a></li>
+          <li><a href="#s12">Governing Law and Dispute Resolution</a></li>
+          <li><a href="#s13">Amendments</a></li>
+          <li><a href="#s14">Contact</a></li>
+        </ol>
+      </div>
+
+      <!-- 1. Acceptance -->
+      <div class="pp-section" id="s1">
+        <div class="pp-section-num">Section 01</div>
+        <h2>Acceptance of Terms</h2>
+        <p>
+          By accessing, browsing, or using the Aayojana platform (the "Platform") at
+          <strong style="color:var(--white);">aayojana-waitlist.vercel.app</strong> or any successor URL,
+          you ("User", "Customer", "Vendor") agree to be legally bound by these Terms of Service ("Terms").
+          If you do not agree to these Terms, you must not use the Platform.
+        </p>
+        <div class="pp-highlight">
+          <p>
+            These Terms constitute a legally binding agreement between you and
+            <strong style="color:var(--white);">Aayojana Technologies Private Limited</strong>
+            ("Aayojana", "Company", "we", "us").
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 2. Definitions -->
+      <div class="pp-section" id="s2">
+        <div class="pp-section-num">Section 02</div>
+        <h2>Definitions</h2>
+        <div class="def-table">
+          <div class="def-row">
+            <div class="def-term">Platform</div>
+            <div class="def-desc">The Aayojana website, mobile application, and all associated services</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">Customer</div>
+            <div class="def-desc">Any individual using the Platform to discover and book event venues or services</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">Vendor</div>
+            <div class="def-desc">Any individual or business registered on the Platform to offer event venues or services</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">Booking</div>
+            <div class="def-desc">A confirmed reservation of a vendor's service by a customer through the Platform</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">Advance Payment</div>
+            <div class="def-desc">The initial payment made by a customer upon booking confirmation</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">Escrow</div>
+            <div class="def-desc">The mechanism by which Aayojana holds advance payments until event completion</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">Commission</div>
+            <div class="def-desc">The percentage fee deducted by Aayojana from vendor payouts on completed bookings</div>
+          </div>
+          <div class="def-row">
+            <div class="def-term">GMV</div>
+            <div class="def-desc">Gross Merchandise Value — the total transaction value processed through the Platform</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 3. Eligibility -->
+      <div class="pp-section" id="s3">
+        <div class="pp-section-num">Section 03</div>
+        <h2>Eligibility</h2>
+        <p>To use Aayojana, you must:</p>
+        <ul>
+          <li>Be at least 18 years of age</li>
+          <li>Be legally capable of entering into a binding contract under Indian law</li>
+          <li>Provide accurate and complete registration information</li>
+          <li>Not be barred from using the Platform under any applicable law</li>
+        </ul>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 4. Platform Nature -->
+      <div class="pp-section" id="s4">
+        <div class="pp-section-num">Section 04</div>
+        <h2>Platform Nature and Aayojana's Role</h2>
+        <p>
+          Aayojana is a managed marketplace that facilitates transactions between Customers and Vendors.
+          Aayojana is <strong style="color:var(--white);">not</strong> a vendor, venue owner, caterer,
+          decorator, or event service provider. We do not own, operate, manage, or control any of the
+          venues or services listed on the Platform.
+        </p>
+        <p>Aayojana's role is to:</p>
+        <ul>
+          <li>Provide the technology infrastructure for discovery, booking, and payment</li>
+          <li>Hold advance payments in escrow</li>
+          <li>Facilitate dispute resolution</li>
+          <li>Verify vendor identity through KYC</li>
+          <li>Deduct and retain platform commission at settlement</li>
+        </ul>
+        <div class="pp-highlight">
+          <p>
+            Aayojana is not liable for the quality, safety, legality, or fitness for purpose of any
+            service provided by Vendors listed on the Platform.
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 5. Customer Terms -->
+      <div class="pp-section" id="s5">
+        <div class="pp-section-num">Section 05</div>
+        <h2>Customer Terms</h2>
+
+        <h3>5.1 Registration</h3>
+        <p>
+          Customers must provide accurate personal information during registration. You are responsible
+          for maintaining the confidentiality of your account credentials.
+        </p>
+
+        <h3>5.2 Booking Process</h3>
+        <ol class="list">
+          <li>Customers initiate a booking request by selecting a vendor listing and submitting required event details</li>
+          <li>The vendor has a defined response window to accept or decline</li>
+          <li>Upon vendor acceptance, the Customer receives a payment link for the advance amount</li>
+          <li>The booking is confirmed only after advance payment is received on-platform</li>
+        </ol>
+
+        <h3>5.3 Advance Payment</h3>
+        <p>
+          Advance amounts are held by Aayojana in escrow and are not released to vendors until event
+          completion is confirmed.
+        </p>
+        <div class="pp-warn">
+          <p>
+            Customers must not attempt to pay vendors directly for any booking initiated through the
+            Platform. Direct payments bypass the Platform's protection and void all dispute rights.
+          </p>
+        </div>
+
+        <h3>5.4 Post-Event Confirmation</h3>
+        <ul>
+          <li>After the event date, Customers have 48 hours to raise a dispute</li>
+          <li>If no dispute is raised within 48 hours, the advance is automatically released to the vendor</li>
+          <li>Aayojana's commission is deducted at the point of release</li>
+        </ul>
+
+        <h3>5.5 Customer Conduct</h3>
+        <p>Customers must not:</p>
+        <ul>
+          <li>Provide false information in booking requests</li>
+          <li>Attempt to contact vendors through personal channels to bypass the Platform</li>
+          <li>Post fraudulent or malicious reviews</li>
+          <li>Use the Platform for any unlawful purpose</li>
+        </ul>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 6. Vendor Terms -->
+      <div class="pp-section" id="s6">
+        <div class="pp-section-num">Section 06</div>
+        <h2>Vendor Terms</h2>
+
+        <h3>6.1 Registration and KYC</h3>
+        <ul>
+          <li>Vendors must complete the full onboarding process including KYC document submission</li>
+          <li>Vendors must provide accurate business information, service descriptions, and pricing</li>
+          <li>Aayojana reserves the right to approve or reject any vendor application without providing reasons</li>
+        </ul>
+
+        <h3>6.2 Listing Standards</h3>
+        <ul>
+          <li>All listing content must be accurate and not misleading</li>
+          <li>Vendors must not advertise services they cannot deliver</li>
+          <li>Pricing displayed must be all-inclusive of the described package</li>
+          <li>Hidden charges not disclosed at listing time are prohibited</li>
+        </ul>
+
+        <h3>6.3 Vendor Obligations</h3>
+        <ul>
+          <li>Vendors must respond to booking requests within the defined response window</li>
+          <li>Vendors must deliver services as described in their accepted booking</li>
+          <li>Vendors must not solicit or accept payments from Platform-sourced customers outside the Platform</li>
+        </ul>
+
+        <h3>6.4 Commission</h3>
+        <ul>
+          <li>Aayojana charges a commission on each completed booking, deducted at payout</li>
+          <li>The current commission rate is <strong style="color:var(--white);">5%</strong> of the booking value, subject to change with 30 days notice</li>
+          <li>Commission rates may vary by vendor category and subscription tier</li>
+        </ul>
+
+        <h3>6.5 Anti-Bypass Policy</h3>
+        <p>Vendors must not, directly or indirectly:</p>
+        <ul>
+          <li>Share personal contact details with customers before booking confirmation</li>
+          <li>Solicit payments through any channel other than the Platform</li>
+          <li>Encourage customers to cancel on-platform and rebook directly</li>
+          <li>Violate the anti-bypass provisions of their Vendor Agreement</li>
+        </ul>
+        <div class="pp-warn">
+          <p>
+            Breach of this clause may result in immediate suspension, commission invoicing for the
+            bypassed transaction, and permanent delisting.
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 7. Payments -->
+      <div class="pp-section" id="s7">
+        <div class="pp-section-num">Section 07</div>
+        <h2>Payments and Refunds</h2>
+        <p>
+          Payment and refund terms are governed by the separate Refund Policy, which forms part of
+          these Terms by reference.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 8. IP -->
+      <div class="pp-section" id="s8">
+        <div class="pp-section-num">Section 08</div>
+        <h2>Intellectual Property</h2>
+        <p>
+          All content on the Platform — including but not limited to the brand name "Aayojana", logo,
+          design, text, graphics, and software — is the exclusive intellectual property of Aayojana
+          Technologies Private Limited. You may not reproduce, distribute, modify, or use any Platform
+          content without prior written permission.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 9. Limitation of Liability -->
+      <div class="pp-section" id="s9">
+        <div class="pp-section-num">Section 09</div>
+        <h2>Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by applicable law, Aayojana's liability for any claim arising
+          from use of the Platform shall not exceed the commission amount received by Aayojana from the
+          specific transaction giving rise to the claim.
+        </p>
+        <p>Aayojana is not liable for:</p>
+        <ul>
+          <li>Service quality failures by Vendors</li>
+          <li>Customer no-shows or cancellations</li>
+          <li>Force majeure events including natural disasters, government restrictions, or pandemics</li>
+          <li>Loss of business, revenue, or reputation arising from use of the Platform</li>
+          <li>Technical downtime or data loss beyond our reasonable control</li>
+        </ul>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 10. Indemnification -->
+      <div class="pp-section" id="s10">
+        <div class="pp-section-num">Section 10</div>
+        <h2>Indemnification</h2>
+        <p>
+          You agree to indemnify and hold harmless Aayojana Technologies Private Limited, its directors,
+          officers, employees, and agents from any claims, damages, losses, or expenses (including legal
+          fees) arising from your use of the Platform, your violation of these Terms, or your violation
+          of any third-party rights.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 11. Termination -->
+      <div class="pp-section" id="s11">
+        <div class="pp-section-num">Section 11</div>
+        <h2>Termination</h2>
+        <p>
+          Aayojana reserves the right to suspend or terminate any user account at any time, with or
+          without notice, for violation of these Terms, fraudulent activity, or any other reason at
+          our sole discretion.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 12. Governing Law -->
+      <div class="pp-section" id="s12">
+        <div class="pp-section-num">Section 12</div>
+        <h2>Governing Law and Dispute Resolution</h2>
+        <p>
+          These Terms are governed by the laws of India. Any disputes arising from these Terms shall
+          be subject to the exclusive jurisdiction of the courts of
+          <strong style="color:var(--white);">Bhubaneswar, Odisha</strong>.
+          Parties shall attempt to resolve disputes through good-faith negotiation before initiating
+          legal proceedings.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 13. Amendments -->
+      <div class="pp-section" id="s13">
+        <div class="pp-section-num">Section 13</div>
+        <h2>Amendments</h2>
+        <p>
+          Aayojana reserves the right to modify these Terms at any time. Material changes will be
+          communicated with at least <strong style="color:var(--white);">15 days notice</strong>.
+          Continued use of the Platform after the effective date of changes constitutes acceptance.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 14. Contact -->
+      <div class="pp-section" id="s14">
+        <div class="pp-section-num">Section 14</div>
+        <h2>Contact</h2>
+        <div class="pp-highlight">
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Aayojana Technologies Private Limited</strong></p>
+          <p style="margin-bottom:8px;">Chakeisiani, Bhubaneswar, Odisha — 751010</p>
+          <p style="margin-bottom:8px;">
+            Email: <a href="mailto:aayoajan15@gmail.com" style="color:var(--gold); text-decoration:none;">aayoajan15@gmail.com</a>
+          </p>
+          <p style="margin-bottom:0;">
+            Phone: <a href="tel:+918658818888" style="color:var(--gold); text-decoration:none;">+91 86588 18888</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <div class="container">
+      <div class="pp-footer-inner">
+        <p class="pp-footer-copy">© 2026 Aayojana Technologies Private Limited · Bhubaneswar, Odisha, India</p>
+        <a href="index.html" class="pp-footer-back">← Back to Aayojana.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const el = document.getElementById('scroll-progress');
+      const max = document.body.scrollHeight - window.innerHeight;
+      el.style.width = (window.scrollY / max * 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>

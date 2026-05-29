@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund Policy — Aayojana Technologies Private Limited</title>
+  <meta name="description" content="Refund Policy of Aayojana Technologies Private Limited. Understand how refunds, disputes, and advance payments are handled on the Aayojana platform.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #000000;
+      --navy-light: #0A0A0A;
+      --gold: #D4AF37;
+      --gold-light: #F5C842;
+      --white: #F8F9FF;
+      --muted: #8A9BB5;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(212, 175, 55, 0.2);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-md: 16px;
+      --radius-sm: 8px;
+      --radius-full: 9999px;
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Scroll Progress ── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; width: 0%; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      z-index: 9999; transition: width 0.1s linear;
+    }
+
+    /* ── Navbar ── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      padding: 18px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-logo {
+      font-family: var(--font-display); font-size: 20px; font-weight: 500;
+      color: var(--white); text-decoration: none; letter-spacing: 1px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-back {
+      font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+
+    /* ── Hero ── */
+    .pp-hero {
+      padding: 120px 0 64px;
+      border-bottom: 1px solid var(--card-border);
+      background: radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.06) 0%, transparent 70%);
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+    .pp-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .pp-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+    .pp-title {
+      font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px);
+      font-weight: 500; color: var(--white); line-height: 1.08;
+      letter-spacing: -0.5px; margin-bottom: 28px;
+    }
+    .pp-meta {
+      display: flex; flex-wrap: wrap; gap: 24px;
+      font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    }
+    .pp-meta span { display: flex; align-items: center; gap: 8px; }
+    .pp-meta span::before { content: '·'; color: var(--gold); }
+    .pp-meta span:first-child::before { display: none; }
+
+    /* ── Content ── */
+    .pp-content { padding: 64px 0 96px; }
+
+    /* TOC */
+    .pp-toc {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin-bottom: 56px; backdrop-filter: blur(16px);
+    }
+    .pp-toc-title {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .pp-toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .pp-toc a {
+      font-size: 14px; color: var(--muted); text-decoration: none;
+      font-family: var(--font-body); transition: color 0.2s;
+    }
+    .pp-toc a:hover { color: var(--gold); }
+
+    /* Sections */
+    .pp-section { margin-bottom: 52px; scroll-margin-top: 100px; }
+    .pp-section-num {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .pp-section h2 {
+      font-family: var(--font-display); font-size: 28px; font-weight: 500;
+      color: var(--white); margin-bottom: 20px; line-height: 1.2;
+    }
+    .pp-section h3 {
+      font-family: var(--font-display); font-size: 20px; font-weight: 500;
+      color: var(--white); margin: 28px 0 12px;
+    }
+    .pp-section p {
+      font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 16px;
+    }
+    .pp-section p:last-child { margin-bottom: 0; }
+    .pp-section ul {
+      padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;
+    }
+    .pp-section ul li {
+      font-size: 15px; color: var(--muted); line-height: 1.7;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .pp-section ul li::before { content: '–'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    /* Divider */
+    .pp-divider { border: none; border-top: 1px solid var(--card-border); margin: 52px 0; }
+
+    /* Boxes */
+    .pp-highlight {
+      background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-highlight p { margin-bottom: 0; }
+    .pp-warn {
+      background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-warn p { margin-bottom: 0; color: #f87171; }
+    .pp-green {
+      background: rgba(74,222,128,0.06); border: 1px solid rgba(74,222,128,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-green p { margin-bottom: 0; color: #86efac; }
+
+    /* Sub-section label */
+    .pp-sub-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(212,175,55,0.6); margin: 28px 0 10px;
+    }
+
+    /* Scenario cards */
+    .scenario-grid { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+    .scenario-card {
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: center; gap: 24px;
+      padding: 18px 22px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+    }
+    .scenario-card.full-refund  { border-color: rgba(74,222,128,0.3); }
+    .scenario-card.partial      { border-color: rgba(212,175,55,0.3); }
+    .scenario-card.no-refund    { border-color: rgba(248,113,113,0.25); }
+    .scenario-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .scenario-outcome {
+      font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+      text-align: right; white-space: nowrap; flex-shrink: 0;
+    }
+    .scenario-card.full-refund .scenario-outcome { color: #4ade80; }
+    .scenario-card.partial     .scenario-outcome { color: var(--gold); }
+    .scenario-card.no-refund   .scenario-outcome { color: #f87171; }
+
+    /* Timeline */
+    .refund-timeline { display: flex; flex-direction: column; gap: 0; margin: 20px 0; position: relative; }
+    .refund-timeline::before {
+      content: ''; position: absolute; left: 19px; top: 24px; bottom: 24px;
+      width: 1px; background: var(--card-border);
+    }
+    .timeline-step {
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 16px 0; position: relative;
+    }
+    .timeline-dot {
+      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono); font-size: 12px; color: var(--gold);
+      position: relative; z-index: 1;
+    }
+    .timeline-body { padding-top: 6px; }
+    .timeline-title { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 4px; }
+    .timeline-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* Refund table */
+    .refund-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .refund-table th {
+      padding: 12px 18px; text-align: left; background: rgba(212,175,55,0.08);
+      font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--gold); border-bottom: 1px solid var(--card-border);
+    }
+    .refund-table td {
+      padding: 13px 18px; font-size: 14px; color: var(--muted);
+      border-bottom: 1px solid rgba(212,175,55,0.06); background: var(--card-bg);
+      line-height: 1.5;
+    }
+    .refund-table tbody tr:last-child td { border-bottom: none; }
+    .refund-table tbody tr:hover td { background: rgba(212,175,55,0.03); }
+    .tag-full    { color: #4ade80; font-family: var(--font-mono); font-size: 12px; }
+    .tag-none    { color: #f87171; font-family: var(--font-mono); font-size: 12px; }
+    .tag-partial { color: var(--gold); font-family: var(--font-mono); font-size: 12px; }
+
+    /* ── Footer ── */
+    .pp-footer {
+      border-top: 1px solid var(--card-border);
+      padding: 32px 0; background: var(--navy-light);
+    }
+    .pp-footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .pp-footer-copy { font-size: 13px; color: var(--muted); font-family: var(--font-mono); }
+    .pp-footer-back {
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      font-family: var(--font-mono); transition: color 0.2s;
+    }
+    .pp-footer-back:hover { color: var(--gold); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      #navbar { padding: 14px 20px; }
+      .container { padding: 0 20px; }
+      .pp-hero { padding: 90px 0 48px; }
+      .pp-content { padding: 40px 0 64px; }
+      .pp-toc { padding: 20px; }
+      .scenario-card { grid-template-columns: 1fr; gap: 8px; }
+      .scenario-outcome { text-align: left; }
+      .refund-table th, .refund-table td { padding: 10px 12px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .pp-meta { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Screenshot_2026-01-24_135831-removebg-preview.png" alt="Aayojana">
+    </a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </header>
+
+  <!-- Hero -->
+  <div class="pp-hero">
+    <div class="container">
+      <div class="pp-label">Legal</div>
+      <h1 class="pp-title">Refund Policy</h1>
+      <div class="pp-meta">
+        <span>Aayojana Technologies Private Limited</span>
+        <span>Effective Date: 1 June 2026</span>
+        <span>Last Updated: 1 June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="pp-content">
+    <div class="container">
+
+      <!-- TOC -->
+      <div class="pp-toc">
+        <div class="pp-toc-title">Table of Contents</div>
+        <ol>
+          <li><a href="#s1">How Our Escrow System Works</a></li>
+          <li><a href="#s2">Refund Scenarios — Quick Reference</a></li>
+          <li><a href="#s3">Vendor Cancellations</a></li>
+          <li><a href="#s4">Customer Cancellations</a></li>
+          <li><a href="#s5">Post-Event Disputes</a></li>
+          <li><a href="#s6">Force Majeure</a></li>
+          <li><a href="#s7">Refund Processing</a></li>
+          <li><a href="#s8">Payments Made Outside the Platform</a></li>
+          <li><a href="#s9">Platform Commission</a></li>
+          <li><a href="#s10">Contact for Refund Queries</a></li>
+        </ol>
+      </div>
+
+      <!-- 1. Escrow -->
+      <div class="pp-section" id="s1">
+        <div class="pp-section-num">Section 01</div>
+        <h2>How Our Escrow System Works</h2>
+        <p>
+          Aayojana's advance protection is built around a simple principle: your money stays with us
+          until your event is delivered. We do not release any advance payment to a vendor before the
+          event takes place.
+        </p>
+
+        <div class="refund-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Booking Confirmed</div>
+              <div class="timeline-desc">Customer pays the advance on-platform. Aayojana holds it in escrow. Vendor is notified.</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Event Day</div>
+              <div class="timeline-desc">Vendor delivers services. Customer attends the event.</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-body">
+              <div class="timeline-title">48-Hour Dispute Window</div>
+              <div class="timeline-desc">
+                Customer has 48 hours after the event date to raise a dispute on the Platform.
+                If no dispute is raised, the advance is automatically released to the vendor.
+              </div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Payout Released</div>
+              <div class="timeline-desc">Vendor receives the advance minus Aayojana's commission, within 3–5 business days.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pp-highlight">
+          <p>
+            The escrow hold is the foundation of Aayojana's advance protection. Customers who pay
+            vendors directly outside the Platform are not covered by this protection.
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 2. Quick Reference -->
+      <div class="pp-section" id="s2">
+        <div class="pp-section-num">Section 02</div>
+        <h2>Refund Scenarios — Quick Reference</h2>
+
+        <table class="refund-table">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Outcome for Customer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vendor cancels the booking</td>
+              <td><span class="tag-full">Full Refund</span></td>
+            </tr>
+            <tr>
+              <td>Vendor fails to show up on event day</td>
+              <td><span class="tag-full">Full Refund</span></td>
+            </tr>
+            <tr>
+              <td>Service materially different from what was booked (dispute upheld)</td>
+              <td><span class="tag-full">Full Refund</span></td>
+            </tr>
+            <tr>
+              <td>Customer cancels more than 30 days before event</td>
+              <td><span class="tag-full">Full Refund</span></td>
+            </tr>
+            <tr>
+              <td>Customer cancels 15–30 days before event</td>
+              <td><span class="tag-partial">50% Refund</span></td>
+            </tr>
+            <tr>
+              <td>Customer cancels 7–14 days before event</td>
+              <td><span class="tag-partial">25% Refund</span></td>
+            </tr>
+            <tr>
+              <td>Customer cancels less than 7 days before event</td>
+              <td><span class="tag-none">No Refund</span></td>
+            </tr>
+            <tr>
+              <td>Customer no-show on event day</td>
+              <td><span class="tag-none">No Refund</span></td>
+            </tr>
+            <tr>
+              <td>Event completed, no dispute raised within 48 hours</td>
+              <td><span class="tag-none">No Refund</span></td>
+            </tr>
+            <tr>
+              <td>Dispute raised but not upheld by Aayojana</td>
+              <td><span class="tag-none">No Refund</span></td>
+            </tr>
+            <tr>
+              <td>Force majeure — government order, natural disaster</td>
+              <td><span class="tag-full">Full Refund</span></td>
+            </tr>
+            <tr>
+              <td>Payment made directly to vendor (outside Platform)</td>
+              <td><span class="tag-none">Not Covered</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 3. Vendor Cancellations -->
+      <div class="pp-section" id="s3">
+        <div class="pp-section-num">Section 03</div>
+        <h2>Vendor Cancellations</h2>
+        <p>
+          If a vendor cancels a confirmed booking for any reason, the customer is entitled to a
+          <strong style="color:#4ade80;">full refund</strong> of the advance amount paid on-platform.
+        </p>
+        <div class="pp-green">
+          <p>
+            Vendor cancellations are the only scenario where refunds are guaranteed without any
+            waiting period or dispute process. We process the refund immediately upon confirming
+            the cancellation.
+          </p>
+        </div>
+        <p>
+          Additionally, the vendor is subject to a cancellation penalty of ₹2,000 per incident,
+          escalating to suspension and delisting for repeat cancellations, as defined in the
+          <a href="vendor-agreement.html" style="color:var(--gold); text-decoration:none;">Vendor Agreement</a>.
+        </p>
+        <p>
+          If a vendor fails to show up on the event day without prior notice, this is treated as a
+          vendor cancellation and the customer is entitled to a full refund along with all applicable
+          vendor penalties.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 4. Customer Cancellations -->
+      <div class="pp-section" id="s4">
+        <div class="pp-section-num">Section 04</div>
+        <h2>Customer Cancellations</h2>
+        <p>
+          Customers may cancel a confirmed booking through the Platform. The refund amount depends
+          on how far in advance of the event date the cancellation is made.
+        </p>
+
+        <div class="scenario-grid">
+          <div class="scenario-card full-refund">
+            <div class="scenario-desc">
+              <strong style="color:var(--white);">More than 30 days before the event</strong><br>
+              Cancellation well in advance. Vendor has adequate time to rebook the date.
+            </div>
+            <div class="scenario-outcome">100% Refund</div>
+          </div>
+          <div class="scenario-card partial">
+            <div class="scenario-desc">
+              <strong style="color:var(--white);">15–30 days before the event</strong><br>
+              Vendor has limited time to fill the slot. Partial compensation is withheld.
+            </div>
+            <div class="scenario-outcome">50% Refund</div>
+          </div>
+          <div class="scenario-card partial">
+            <div class="scenario-desc">
+              <strong style="color:var(--white);">7–14 days before the event</strong><br>
+              Vendor has already committed resources. Minimal refund applies.
+            </div>
+            <div class="scenario-outcome">25% Refund</div>
+          </div>
+          <div class="scenario-card no-refund">
+            <div class="scenario-desc">
+              <strong style="color:var(--white);">Less than 7 days before the event</strong><br>
+              Vendor resources are fully committed. No refund is applicable.
+            </div>
+            <div class="scenario-outcome">No Refund</div>
+          </div>
+          <div class="scenario-card no-refund">
+            <div class="scenario-desc">
+              <strong style="color:var(--white);">Customer no-show on event day</strong><br>
+              Vendor delivered services as agreed. Full advance is retained.
+            </div>
+            <div class="scenario-outcome">No Refund</div>
+          </div>
+        </div>
+
+        <div class="pp-highlight">
+          <p>
+            The amounts retained on customer cancellations are released to the vendor as compensation
+            for the blocked date, less Aayojana's commission.
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 5. Post-Event Disputes -->
+      <div class="pp-section" id="s5">
+        <div class="pp-section-num">Section 05</div>
+        <h2>Post-Event Disputes</h2>
+        <p>
+          If a customer is dissatisfied with the service received, they must raise a dispute through
+          the Platform within <strong style="color:var(--white);">48 hours</strong> of the event date.
+          Disputes raised after this window cannot be considered.
+        </p>
+
+        <h3>What constitutes a valid dispute</h3>
+        <ul>
+          <li>The vendor failed to show up or abandoned the event midway</li>
+          <li>The service delivered was materially different from the accepted booking description</li>
+          <li>The venue or setup was unsafe or unusable</li>
+          <li>A core part of the package (e.g. main décor, catering, photography) was not delivered</li>
+        </ul>
+
+        <h3>What is not a valid dispute</h3>
+        <ul>
+          <li>Minor aesthetic differences from reference photos or sample images</li>
+          <li>Personal preference or subjective dissatisfaction with delivered work</li>
+          <li>Issues caused by the customer (e.g. late arrivals, changes made on the day)</li>
+          <li>Weather or external factors outside the vendor's control</li>
+        </ul>
+
+        <h3>Dispute resolution process</h3>
+        <ol style="padding-left:0; list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--muted);">
+            <span style="color:var(--gold); font-family:var(--font-mono); font-size:12px; flex-shrink:0; margin-top:3px;">01</span>
+            Customer raises dispute with evidence (photos, video, written description) through the Platform
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--muted);">
+            <span style="color:var(--gold); font-family:var(--font-mono); font-size:12px; flex-shrink:0; margin-top:3px;">02</span>
+            Aayojana reviews the evidence and contacts both parties within 3 business days
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--muted);">
+            <span style="color:var(--gold); font-family:var(--font-mono); font-size:12px; flex-shrink:0; margin-top:3px;">03</span>
+            Both parties may submit supporting documentation
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--muted);">
+            <span style="color:var(--gold); font-family:var(--font-mono); font-size:12px; flex-shrink:0; margin-top:3px;">04</span>
+            Aayojana issues a resolution decision within 7 business days of the dispute being raised
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--muted);">
+            <span style="color:var(--gold); font-family:var(--font-mono); font-size:12px; flex-shrink:0; margin-top:3px;">05</span>
+            If upheld: full refund to customer. If not upheld: advance released to vendor.
+          </li>
+        </ol>
+
+        <div class="pp-warn" style="margin-top:24px;">
+          <p>
+            Aayojana's dispute resolution decision is final. Disputes raised beyond 48 hours of the
+            event date will not be accepted regardless of circumstances.
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 6. Force Majeure -->
+      <div class="pp-section" id="s6">
+        <div class="pp-section-num">Section 06</div>
+        <h2>Force Majeure</h2>
+        <p>
+          In the event of a force majeure occurrence — including natural disasters, government-imposed
+          curfews, declared state emergencies, or pandemic-related restrictions that prevent the event
+          from taking place — a full refund will be issued to the customer, provided that:
+        </p>
+        <ul>
+          <li>The force majeure event directly prevents the event from being held on the booked date</li>
+          <li>Supporting documentation (government order, news report, official notification) is submitted to Aayojana within 48 hours of the cancellation</li>
+          <li>The cancellation is reported through the Platform before the event date where possible</li>
+        </ul>
+        <p>
+          Force majeure refunds are processed within 7 business days of document verification and
+          are not subject to the standard customer cancellation deductions.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 7. Refund Processing -->
+      <div class="pp-section" id="s7">
+        <div class="pp-section-num">Section 07</div>
+        <h2>Refund Processing</h2>
+
+        <h3>Timelines</h3>
+        <ul>
+          <li><strong style="color:var(--white);">Vendor cancellation refunds</strong> — processed within 2 business days of confirmed cancellation</li>
+          <li><strong style="color:var(--white);">Customer cancellation refunds</strong> — processed within 5 business days of cancellation request</li>
+          <li><strong style="color:var(--white);">Dispute-upheld refunds</strong> — processed within 3 business days of Aayojana's resolution decision</li>
+          <li><strong style="color:var(--white);">Force majeure refunds</strong> — processed within 7 business days of document verification</li>
+        </ul>
+
+        <h3>Refund method</h3>
+        <p>
+          All refunds are credited back to the original payment source (UPI ID, bank account, or
+          payment gateway used at the time of booking). Refunds cannot be redirected to a different
+          account or payment method.
+        </p>
+        <p>
+          Razorpay processing charges (if any) deducted at the time of the original payment are
+          non-refundable by Aayojana, as these are third-party charges outside our control.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 8. Outside Platform -->
+      <div class="pp-section" id="s8">
+        <div class="pp-section-num">Section 08</div>
+        <h2>Payments Made Outside the Platform</h2>
+        <div class="pp-warn">
+          <p>
+            Aayojana provides zero protection for payments made directly to vendors outside the Platform —
+            whether via cash, personal UPI, bank transfer, or any other method. If a vendor solicits
+            direct payment for a booking initiated through Aayojana, you should report it immediately
+            to <a href="mailto:aayoajan15@gmail.com" style="color:#fca5a5; text-decoration:none;">aayoajan15@gmail.com</a>.
+          </p>
+        </div>
+        <p>
+          Customers who bypass the Platform's payment system cannot raise disputes, claim refunds,
+          or seek Aayojana's intervention for any outcome related to that transaction.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 9. Commission -->
+      <div class="pp-section" id="s9">
+        <div class="pp-section-num">Section 09</div>
+        <h2>Platform Commission</h2>
+        <p>
+          Aayojana's platform commission is deducted only on completed and settled bookings, at the
+          point of vendor payout. Commission is <strong style="color:var(--white);">not charged</strong>
+          on refunded transactions.
+        </p>
+        <p>
+          In the case of partial refunds (customer cancellations), the commission is calculated on
+          the amount retained by the vendor, not on the full advance amount.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 10. Contact -->
+      <div class="pp-section" id="s10">
+        <div class="pp-section-num">Section 10</div>
+        <h2>Contact for Refund Queries</h2>
+        <p>
+          For any refund-related question, dispute, or escalation, contact us through the following
+          channels. Please include your booking reference number in all communications.
+        </p>
+        <div class="pp-highlight">
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Aayojana Technologies Private Limited</strong></p>
+          <p style="margin-bottom:8px;">Chakeisiani, Bhubaneswar, Odisha — 751010</p>
+          <p style="margin-bottom:8px;">
+            Email: <a href="mailto:aayoajan15@gmail.com" style="color:var(--gold); text-decoration:none;">aayoajan15@gmail.com</a>
+          </p>
+          <p style="margin-bottom:0;">
+            Phone: <a href="tel:+918658818888" style="color:var(--gold); text-decoration:none;">+91 86588 18888</a>
+          </p>
+        </div>
+        <p style="margin-top:20px;">
+          We aim to respond to all refund queries within <strong style="color:var(--white);">24 hours</strong>
+          on business days (Monday–Saturday, 10 AM – 6 PM IST).
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <div class="container">
+      <div class="pp-footer-inner">
+        <p class="pp-footer-copy">© 2026 Aayojana Technologies Private Limited · Bhubaneswar, Odisha, India</p>
+        <a href="index.html" class="pp-footer-back">← Back to Aayojana.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const el = document.getElementById('scroll-progress');
+      const max = document.body.scrollHeight - window.innerHeight;
+      el.style.width = (window.scrollY / max * 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>

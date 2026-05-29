@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Agreement — Aayojana Technologies Private Limited</title>
+  <meta name="description" content="Vendor Agreement of Aayojana Technologies Private Limited. Terms governing vendor listings, commissions, payouts, and obligations on the Aayojana platform.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #000000;
+      --navy-light: #0A0A0A;
+      --gold: #D4AF37;
+      --gold-light: #F5C842;
+      --white: #F8F9FF;
+      --muted: #8A9BB5;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(212, 175, 55, 0.2);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-md: 16px;
+      --radius-sm: 8px;
+      --radius-full: 9999px;
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Scroll Progress ── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; width: 0%; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      z-index: 9999; transition: width 0.1s linear;
+    }
+
+    /* ── Navbar ── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      padding: 18px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-logo {
+      font-family: var(--font-display); font-size: 20px; font-weight: 500;
+      color: var(--white); text-decoration: none; letter-spacing: 1px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-back {
+      font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+
+    /* ── Hero Banner ── */
+    .pp-hero {
+      padding: 120px 0 64px;
+      border-bottom: 1px solid var(--card-border);
+      background: radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.06) 0%, transparent 70%);
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 48px; }
+    .pp-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold);
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .pp-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+    .pp-title {
+      font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px);
+      font-weight: 500; color: var(--white); line-height: 1.08;
+      letter-spacing: -0.5px; margin-bottom: 28px;
+    }
+    .pp-meta {
+      display: flex; flex-wrap: wrap; gap: 24px;
+      font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    }
+    .pp-meta span { display: flex; align-items: center; gap: 8px; }
+    .pp-meta span::before { content: '·'; color: var(--gold); }
+    .pp-meta span:first-child::before { display: none; }
+
+    /* Parties box */
+    .parties-box {
+      margin-top: 32px; padding: 24px 28px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-md); backdrop-filter: blur(16px);
+    }
+    .parties-box p {
+      font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 12px;
+    }
+    .parties-box p:last-child { margin-bottom: 0; }
+    .parties-and {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      color: var(--gold); text-transform: uppercase;
+      margin: 12px 0; display: block;
+    }
+
+    /* ── Content ── */
+    .pp-content { padding: 64px 0 96px; }
+
+    /* TOC */
+    .pp-toc {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin-bottom: 56px; backdrop-filter: blur(16px);
+    }
+    .pp-toc-title {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .pp-toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .pp-toc a {
+      font-size: 14px; color: var(--muted); text-decoration: none;
+      font-family: var(--font-body); transition: color 0.2s;
+    }
+    .pp-toc a:hover { color: var(--gold); }
+
+    /* Sections */
+    .pp-section { margin-bottom: 52px; scroll-margin-top: 100px; }
+    .pp-section-num {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .pp-section h2 {
+      font-family: var(--font-display); font-size: 28px; font-weight: 500;
+      color: var(--white); margin-bottom: 20px; line-height: 1.2;
+    }
+    .pp-section h3 {
+      font-family: var(--font-display); font-size: 20px; font-weight: 500;
+      color: var(--white); margin: 28px 0 12px;
+    }
+    .pp-section p {
+      font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 16px;
+    }
+    .pp-section p:last-child { margin-bottom: 0; }
+    .pp-section ul {
+      padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;
+    }
+    .pp-section ul li {
+      font-size: 15px; color: var(--muted); line-height: 1.7;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .pp-section ul li::before { content: '–'; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .pp-section ol.list {
+      padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;
+      counter-reset: pp-counter;
+    }
+    .pp-section ol.list li {
+      counter-increment: pp-counter;
+      font-size: 15px; color: var(--muted); line-height: 1.7;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .pp-section ol.list li::before {
+      content: counter(pp-counter) '.'; color: var(--gold);
+      font-family: var(--font-mono); font-size: 12px; flex-shrink: 0;
+      margin-top: 3px; min-width: 22px;
+    }
+
+    /* Divider */
+    .pp-divider { border: none; border-top: 1px solid var(--card-border); margin: 52px 0; }
+
+    /* Highlight / warn */
+    .pp-highlight {
+      background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-highlight p { margin-bottom: 0; }
+    .pp-warn {
+      background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.2);
+      border-radius: var(--radius-md); padding: 20px 24px; margin: 20px 0;
+    }
+    .pp-warn p { margin-bottom: 0; color: #f87171; }
+    .pp-critical {
+      background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.35);
+      border-radius: var(--radius-md); padding: 24px 28px; margin: 24px 0;
+    }
+    .pp-critical-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      text-transform: uppercase; color: #f87171; margin-bottom: 10px;
+    }
+    .pp-critical p { color: #fca5a5; margin-bottom: 0; font-size: 15px; line-height: 1.7; }
+
+    /* Sub-section label */
+    .pp-sub-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(212,175,55,0.6); margin: 28px 0 10px;
+    }
+
+    /* Commission table */
+    .commission-table {
+      width: 100%; border-collapse: collapse; margin: 20px 0;
+      border-radius: var(--radius-md); overflow: hidden;
+    }
+    .commission-table thead tr {
+      background: rgba(212,175,55,0.1);
+    }
+    .commission-table th {
+      padding: 14px 20px; text-align: left;
+      font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--gold);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .commission-table td {
+      padding: 14px 20px; font-size: 14px; color: var(--muted);
+      border-bottom: 1px solid rgba(212,175,55,0.06);
+      background: var(--card-bg);
+    }
+    .commission-table tbody tr:last-child td { border-bottom: none; }
+    .commission-table tbody tr:hover td { background: rgba(212,175,55,0.04); }
+    .tier-free { color: var(--muted); }
+    .tier-growth { color: var(--gold-light); }
+    .tier-premium { color: #4ade80; }
+
+    /* Penalty steps */
+    .penalty-steps { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    .penalty-step {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 16px 20px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+    }
+    .penalty-num {
+      font-family: var(--font-mono); font-size: 12px; color: var(--gold);
+      min-width: 32px; flex-shrink: 0; padding-top: 1px;
+    }
+    .penalty-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .penalty-step.severe { border-color: rgba(248,113,113,0.3); }
+    .penalty-step.severe .penalty-num { color: #f87171; }
+
+    /* Detection mechanism */
+    .detection-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;
+    }
+    .detection-item {
+      padding: 14px 18px;
+      background: rgba(212,175,55,0.04); border: 1px solid rgba(212,175,55,0.1);
+      border-radius: var(--radius-sm);
+      font-size: 13px; color: var(--muted); line-height: 1.6;
+    }
+    .detection-item::before {
+      content: '◉ '; color: var(--gold); font-size: 10px;
+    }
+
+    /* Deductions list */
+    .deduction-list { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+    .deduction-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 18px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm); font-size: 14px;
+    }
+    .deduction-item span:first-child { color: var(--muted); }
+    .deduction-item span:last-child { color: var(--gold); font-family: var(--font-mono); font-size: 12px; }
+
+    /* ── Footer ── */
+    .pp-footer {
+      border-top: 1px solid var(--card-border);
+      padding: 32px 0; background: var(--navy-light);
+    }
+    .pp-footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .pp-footer-copy { font-size: 13px; color: var(--muted); font-family: var(--font-mono); }
+    .pp-footer-back {
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      font-family: var(--font-mono); transition: color 0.2s;
+    }
+    .pp-footer-back:hover { color: var(--gold); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      #navbar { padding: 14px 20px; }
+      .container { padding: 0 20px; }
+      .pp-hero { padding: 90px 0 48px; }
+      .pp-content { padding: 40px 0 64px; }
+      .pp-toc { padding: 20px; }
+      .detection-grid { grid-template-columns: 1fr; }
+      .commission-table th, .commission-table td { padding: 12px 14px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .pp-meta { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/Screenshot_2026-01-24_135831-removebg-preview.png" alt="Aayojana">
+    </a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </header>
+
+  <!-- Hero -->
+  <div class="pp-hero">
+    <div class="container">
+      <div class="pp-label">Legal · Vendor</div>
+      <h1 class="pp-title">Vendor Agreement</h1>
+      <div class="pp-meta">
+        <span>Aayojana Technologies Private Limited</span>
+        <span>Effective Date: 1 June 2026</span>
+        <span>Version 1.0</span>
+      </div>
+
+      <div class="parties-box">
+        <p>
+          This Vendor Agreement ("Agreement") is entered into between:
+          <strong style="color:var(--white);">Aayojana Technologies Private Limited</strong>, a company
+          incorporated under the Companies Act, 2013, with its registered office at Chakeisiani,
+          Bhubaneswar, Odisha — 751010 ("Aayojana", "Platform", "Company")
+        </p>
+        <span class="parties-and">AND</span>
+        <p>
+          The vendor, business, or individual accepting this Agreement during the onboarding process
+          ("Vendor", "You")
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="pp-content">
+    <div class="container">
+
+      <!-- TOC -->
+      <div class="pp-toc">
+        <div class="pp-toc-title">Table of Contents</div>
+        <ol>
+          <li><a href="#s1">Nature of Relationship</a></li>
+          <li><a href="#s2">Vendor Eligibility and Onboarding</a></li>
+          <li><a href="#s3">Listing Standards and Obligations</a></li>
+          <li><a href="#s4">Booking Process Obligations</a></li>
+          <li><a href="#s5">Commission Structure</a></li>
+          <li><a href="#s6">Payment and Payout Terms</a></li>
+          <li><a href="#s7">Anti-Bypass Policy</a></li>
+          <li><a href="#s8">Intellectual Property</a></li>
+          <li><a href="#s9">Confidentiality</a></li>
+          <li><a href="#s10">Representations and Warranties</a></li>
+          <li><a href="#s11">Term and Termination</a></li>
+          <li><a href="#s12">Dispute Resolution Between Vendor and Aayojana</a></li>
+          <li><a href="#s13">Governing Law</a></li>
+          <li><a href="#s14">Entire Agreement</a></li>
+          <li><a href="#s15">Contact</a></li>
+        </ol>
+      </div>
+
+      <!-- 1. Nature of Relationship -->
+      <div class="pp-section" id="s1">
+        <div class="pp-section-num">Section 01</div>
+        <h2>Nature of Relationship</h2>
+        <p>
+          This Agreement governs the terms under which the Vendor lists and offers services on the
+          Aayojana Platform. The Vendor is an <strong style="color:var(--white);">independent contractor</strong>
+          and not an employee, agent, partner, or joint venturer of Aayojana. Nothing in this Agreement
+          creates any employment relationship.
+        </p>
+        <div class="pp-highlight">
+          <p>
+            Aayojana provides the technology infrastructure, payment processing, customer discovery,
+            and trust mechanisms. The Vendor provides the actual event services. Aayojana is not
+            responsible for the quality, delivery, or outcome of Vendor services.
+          </p>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 2. Eligibility -->
+      <div class="pp-section" id="s2">
+        <div class="pp-section-num">Section 02</div>
+        <h2>Vendor Eligibility and Onboarding</h2>
+        <p>To be listed on Aayojana, the Vendor must:</p>
+        <ul>
+          <li>Be a legally operating business or individual service provider in India</li>
+          <li>Submit valid KYC documents: Aadhaar card, PAN card, and GST registration (if applicable)</li>
+          <li>Provide accurate business name, service category, location, and contact details</li>
+          <li>Submit a valid bank account or UPI ID for payouts</li>
+          <li>Sign and accept this Agreement digitally during the onboarding process</li>
+          <li>Comply with all applicable local, state, and national laws governing the provision of event services</li>
+        </ul>
+        <p style="margin-top:16px;">
+          Aayojana reserves the right to approve or reject any Vendor application at its sole discretion.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 3. Listing Standards -->
+      <div class="pp-section" id="s3">
+        <div class="pp-section-num">Section 03</div>
+        <h2>Listing Standards and Obligations</h2>
+
+        <h3>3.1 Accuracy</h3>
+        <p>
+          The Vendor must ensure that all listing content — including service descriptions, photographs,
+          pricing, inclusions, exclusions, and availability — is accurate, complete, and not misleading
+          at all times.
+        </p>
+
+        <h3>3.2 Pricing Transparency</h3>
+        <p>
+          All prices displayed must be all-inclusive for the described package.
+        </p>
+        <div class="pp-warn">
+          <p>
+            Hidden charges, last-minute additions, or charges not disclosed at the time of listing are
+            strictly prohibited and constitute a breach of this Agreement.
+          </p>
+        </div>
+
+        <h3>3.3 Availability</h3>
+        <p>
+          The Vendor must maintain an accurate availability calendar. Accepting bookings for dates that
+          are already committed to other clients is a material breach of this Agreement.
+        </p>
+
+        <h3>3.4 Photographs</h3>
+        <p>
+          Listing photographs must accurately represent the Vendor's actual services. Use of photographs
+          from other venues or decorators without disclosure is prohibited.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 4. Booking Process -->
+      <div class="pp-section" id="s4">
+        <div class="pp-section-num">Section 04</div>
+        <h2>Booking Process Obligations</h2>
+
+        <h3>4.1 Response Window</h3>
+        <p>
+          The Vendor must respond to all incoming booking requests (accept or decline) within
+          <strong style="color:var(--white);">24 hours</strong> of receipt. Failure to respond within
+          this window results in automatic expiry of the booking request.
+        </p>
+
+        <h3>4.2 Service Delivery</h3>
+        <p>
+          Upon accepting a booking and receiving the confirmed advance payment notification from
+          Aayojana, the Vendor is contractually obligated to deliver the agreed services on the
+          confirmed date, as described in the accepted booking.
+        </p>
+
+        <h3>4.3 Vendor Cancellations</h3>
+        <p>Vendor-initiated cancellations are taken extremely seriously. In the event of a Vendor cancellation:</p>
+
+        <div class="penalty-steps">
+          <div class="penalty-step">
+            <div class="penalty-num">1st</div>
+            <div class="penalty-desc">Customer receives a full refund · Vendor receives no compensation · Cancellation penalty of <strong style="color:var(--white);">₹2,000</strong> applied</div>
+          </div>
+          <div class="penalty-step severe">
+            <div class="penalty-num">2nd</div>
+            <div class="penalty-desc">Second cancellation within 6 months results in a <strong style="color:#fca5a5;">30-day suspension</strong></div>
+          </div>
+          <div class="penalty-step severe">
+            <div class="penalty-num">3rd</div>
+            <div class="penalty-desc"><strong style="color:#fca5a5;">Permanent delisting</strong> from the Platform</div>
+          </div>
+        </div>
+
+        <p style="margin-top:16px;">
+          Force majeure cancellations (natural disasters, government-mandated closures) are exempt from
+          penalties upon submission of supporting documentation within 48 hours.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 5. Commission -->
+      <div class="pp-section" id="s5">
+        <div class="pp-section-num">Section 05</div>
+        <h2>Commission Structure</h2>
+
+        <h3>5.1 Commission Rate</h3>
+        <p>Aayojana charges a commission on each completed booking. The current rates are:</p>
+
+        <table class="commission-table">
+          <thead>
+            <tr>
+              <th>Vendor Tier</th>
+              <th>Monthly Fee</th>
+              <th>Commission Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tier-free">Basic (Free)</span></td>
+              <td>₹0</td>
+              <td>8% of booking value</td>
+            </tr>
+            <tr>
+              <td><span class="tier-growth">Growth</span></td>
+              <td>₹999/month</td>
+              <td>6% of booking value</td>
+            </tr>
+            <tr>
+              <td><span class="tier-premium">Premium</span></td>
+              <td>₹2,499/month</td>
+              <td>4% of booking value</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pp-highlight">
+          <p>
+            <strong style="color:var(--white);">Launch period:</strong> 5% flat commission for all vendors
+            onboarded during the first 6 months of platform operation, regardless of tier.
+          </p>
+        </div>
+
+        <h3>5.2 Commission Deduction</h3>
+        <p>
+          Commission is automatically deducted from the advance payment at the point of payout to the
+          Vendor. No separate invoice or payment from the Vendor is required.
+        </p>
+
+        <h3>5.3 GST on Commission</h3>
+        <p>
+          GST at 18% is applicable on Aayojana's commission amount and is collected from the Vendor
+          as per applicable tax law.
+        </p>
+
+        <h3>5.4 Commission Changes</h3>
+        <p>
+          Aayojana may revise commission rates with <strong style="color:var(--white);">30 days written notice</strong>
+          to the Vendor. Continued use of the Platform after the notice period constitutes acceptance
+          of the revised rates.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 6. Payment & Payout -->
+      <div class="pp-section" id="s6">
+        <div class="pp-section-num">Section 06</div>
+        <h2>Payment and Payout Terms</h2>
+
+        <h3>6.1 Advance Collection</h3>
+        <p>
+          All advance payments from Customers are collected by Aayojana through the Platform's payment
+          gateway. Vendors must not request or accept advance payments directly from Platform-sourced
+          customers.
+        </p>
+
+        <h3>6.2 Escrow Hold</h3>
+        <p>Advance payments are held by Aayojana in escrow until one of the following:</p>
+        <ul>
+          <li>The Customer confirms event completion through the Platform (triggers immediate payout processing)</li>
+          <li>48 hours elapse after the event date with no dispute raised (triggers automatic payout)</li>
+          <li>A dispute is resolved in the Vendor's favour (triggers payout of disputed amount)</li>
+        </ul>
+
+        <h3>6.3 Payout Processing</h3>
+        <p>
+          Payouts are processed within <strong style="color:var(--white);">3–5 business days</strong>
+          of the payout trigger. Payouts are made to the Vendor's registered bank account or UPI ID.
+        </p>
+
+        <h3>6.4 Payout Deductions</h3>
+        <p>The following are deducted from payout:</p>
+        <div class="deduction-list">
+          <div class="deduction-item">
+            <span>Aayojana commission</span>
+            <span>As per agreed tier</span>
+          </div>
+          <div class="deduction-item">
+            <span>GST on commission</span>
+            <span>18% of commission</span>
+          </div>
+          <div class="deduction-item">
+            <span>Cancellation penalties</span>
+            <span>If applicable</span>
+          </div>
+          <div class="deduction-item">
+            <span>Amounts owed from prior disputes</span>
+            <span>If applicable</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 7. Anti-Bypass -->
+      <div class="pp-section" id="s7">
+        <div class="pp-section-num">Section 07</div>
+        <h2>Anti-Bypass Policy</h2>
+
+        <div class="pp-critical">
+          <div class="pp-critical-label">⚠ Critical Clause</div>
+          <p>
+            This clause is critical and its violation constitutes the most serious breach of this Agreement.
+          </p>
+        </div>
+
+        <h3>7.1 Prohibited Actions</h3>
+        <p>The Vendor must not, under any circumstances:</p>
+        <ul>
+          <li>Share personal phone numbers, email addresses, or social media handles with customers before booking confirmation</li>
+          <li>Encourage, suggest, or facilitate payment outside the Aayojana Platform for any booking initiated through the Platform</li>
+          <li>Offer discounts to customers in exchange for booking directly (bypassing the Platform)</li>
+          <li>Accept cash, UPI transfers, or any form of direct payment from Platform-sourced customers for Platform-initiated bookings</li>
+        </ul>
+
+        <h3>7.2 Detection Mechanisms</h3>
+        <p>Aayojana employs the following mechanisms to detect bypass attempts:</p>
+        <div class="detection-grid">
+          <div class="detection-item">Keyword monitoring in Platform messaging for phone numbers, external links, and bypass language</div>
+          <div class="detection-item">Customer reporting system for bypass attempts</div>
+          <div class="detection-item">Periodic customer verification calls post-event</div>
+          <div class="detection-item">Unusual booking pattern analysis</div>
+        </div>
+
+        <h3>7.3 Consequences of Bypass</h3>
+        <div class="penalty-steps">
+          <div class="penalty-step">
+            <div class="penalty-num">1st</div>
+            <div class="penalty-desc">Written warning + invoice for estimated commission on the bypassed transaction</div>
+          </div>
+          <div class="penalty-step severe">
+            <div class="penalty-num">2nd</div>
+            <div class="penalty-desc"><strong style="color:#fca5a5;">90-day suspension</strong> + commission invoice</div>
+          </div>
+          <div class="penalty-step severe">
+            <div class="penalty-num">3rd</div>
+            <div class="penalty-desc"><strong style="color:#fca5a5;">Permanent delisting</strong> + legal action for breach of contract</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 8. IP -->
+      <div class="pp-section" id="s8">
+        <div class="pp-section-num">Section 08</div>
+        <h2>Intellectual Property</h2>
+        <p>
+          By listing on Aayojana, the Vendor grants Aayojana a non-exclusive, royalty-free license to
+          use the Vendor's listing photographs, business name, and description for Platform marketing
+          and promotional purposes.
+        </p>
+        <p>
+          The Vendor represents that they own or have the right to use all content submitted to the
+          Platform and that such content does not infringe any third-party intellectual property rights.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 9. Confidentiality -->
+      <div class="pp-section" id="s9">
+        <div class="pp-section-num">Section 09</div>
+        <h2>Confidentiality</h2>
+        <p>
+          The Vendor agrees to keep confidential all information about Aayojana's commission structure,
+          technology, pricing algorithms, customer data, and business strategy that is shared during
+          onboarding or operation. This obligation survives termination of this Agreement for a period
+          of <strong style="color:var(--white);">2 years</strong>.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 10. Representations -->
+      <div class="pp-section" id="s10">
+        <div class="pp-section-num">Section 10</div>
+        <h2>Representations and Warranties</h2>
+        <p>The Vendor represents and warrants that:</p>
+        <ul>
+          <li>They have the legal right to provide the services listed on the Platform</li>
+          <li>Their business complies with all applicable local, state, and national laws</li>
+          <li>They hold all necessary licenses and permits for their services (FSSAI for caterers, etc.)</li>
+          <li>All information provided to Aayojana is accurate and complete</li>
+          <li>They will maintain the standards required for Aayojana's verified vendor badge</li>
+        </ul>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 11. Termination -->
+      <div class="pp-section" id="s11">
+        <div class="pp-section-num">Section 11</div>
+        <h2>Term and Termination</h2>
+
+        <h3>11.1 Term</h3>
+        <p>
+          This Agreement commences on the date of acceptance and continues until terminated by either party.
+        </p>
+
+        <h3>11.2 Termination by Vendor</h3>
+        <p>
+          The Vendor may terminate this Agreement by providing
+          <strong style="color:var(--white);">30 days written notice</strong>. All confirmed bookings
+          within the notice period must still be fulfilled.
+        </p>
+
+        <h3>11.3 Termination by Aayojana</h3>
+        <p>Aayojana may terminate this Agreement immediately and without notice for:</p>
+        <ul>
+          <li>Breach of the anti-bypass policy</li>
+          <li>Providing false KYC information</li>
+          <li>Repeated service delivery failures</li>
+          <li>Fraudulent activity</li>
+          <li>Any conduct that damages Aayojana's reputation or trust infrastructure</li>
+        </ul>
+
+        <h3>11.4 Effect of Termination</h3>
+        <p>
+          Upon termination, the Vendor's listing is removed from the Platform. All pending payouts
+          for completed bookings will be processed normally. Commission on pending bookings remains payable.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 12. Dispute Resolution -->
+      <div class="pp-section" id="s12">
+        <div class="pp-section-num">Section 12</div>
+        <h2>Dispute Resolution Between Vendor and Aayojana</h2>
+        <p>
+          Any dispute arising from this Agreement shall first be attempted through good-faith negotiation
+          within 15 days. If unresolved, disputes shall be referred to arbitration under the
+          <strong style="color:var(--white);">Arbitration and Conciliation Act, 1996</strong>, with a
+          sole arbitrator appointed by mutual consent. The seat of arbitration shall be
+          <strong style="color:var(--white);">Bhubaneswar, Odisha</strong>. The language of arbitration
+          shall be English.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 13. Governing Law -->
+      <div class="pp-section" id="s13">
+        <div class="pp-section-num">Section 13</div>
+        <h2>Governing Law</h2>
+        <p>
+          This Agreement is governed by the laws of India. The courts of
+          <strong style="color:var(--white);">Bhubaneswar, Odisha</strong> shall have exclusive
+          jurisdiction over all disputes arising from this Agreement.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 14. Entire Agreement -->
+      <div class="pp-section" id="s14">
+        <div class="pp-section-num">Section 14</div>
+        <h2>Entire Agreement</h2>
+        <p>
+          This Agreement, together with the
+          <a href="terms-of-service.html" style="color:var(--gold); text-decoration:none;">Terms of Service</a>,
+          <a href="#" style="color:var(--gold); text-decoration:none;">Refund Policy</a>, and
+          <a href="privacy-policy.html" style="color:var(--gold); text-decoration:none;">Privacy Policy</a>
+          (all available at the Platform), constitutes the entire agreement between the parties and
+          supersedes all prior understandings.
+        </p>
+      </div>
+
+      <hr class="pp-divider">
+
+      <!-- 15. Contact -->
+      <div class="pp-section" id="s15">
+        <div class="pp-section-num">Section 15</div>
+        <h2>Contact</h2>
+        <div class="pp-highlight">
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Aayojana Technologies Private Limited</strong></p>
+          <p style="margin-bottom:8px;">Chakeisiani, Bhubaneswar, Odisha — 751010</p>
+          <p style="margin-bottom:8px;">
+            Email: <a href="mailto:aayoajan15@gmail.com" style="color:var(--gold); text-decoration:none;">aayoajan15@gmail.com</a>
+          </p>
+          <p style="margin-bottom:0;">
+            Phone:
+            <a href="tel:+918658818888" style="color:var(--gold); text-decoration:none;">+91 86588 18888</a> ·
+            <a href="tel:+918249221773" style="color:var(--gold); text-decoration:none;">+91 82492 21773</a> ·
+            <a href="tel:+919238823466" style="color:var(--gold); text-decoration:none;">+91 92388 23466</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <div class="container">
+      <div class="pp-footer-inner">
+        <p class="pp-footer-copy">© 2026 Aayojana Technologies Private Limited · Bhubaneswar, Odisha, India</p>
+        <a href="index.html" class="pp-footer-back">← Back to Aayojana.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const el = document.getElementById('scroll-progress');
+      const max = document.body.scrollHeight - window.innerHeight;
+      el.style.width = (window.scrollY / max * 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>
