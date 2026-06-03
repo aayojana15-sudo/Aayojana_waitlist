@@ -2790,6 +2790,12 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('preloader').classList.add('hidden');
+        // Disable smooth scroll briefly so the jump is instant, then re-enable
+        document.documentElement.style.scrollBehavior = 'auto';
+        document.getElementById('ai-feature').scrollIntoView();
+        setTimeout(() => {
+          document.documentElement.style.scrollBehavior = '';
+        }, 100);
       }, 1700);
     });
 
